@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>articleIndex</key>
+		<string>1</string>
+		<key>articleUrl</key>
+		<string>http://objccn.io/issue-12-1/</string>
+		<key>articleTitle</key>
+		<string>动画解释</string>
+	</dict>
+	<dict>
+		<key>articleIndex</key>
+		<string>2</string>
+		<key>articleUrl</key>
+		<string>http://blog.devtang.com/</string>
+		<key>articleTitle</key>
+		<string>唐巧的技术博客</string>
+	</dict>
+	<dict>
+		<key>articleIndex</key>
+		<string>3</string>
+		<key>articleUrl</key>
+		<string>http://objcio.cn/</string>
+		<key>articleTitle</key>
+		<string>objc中国</string>
+	</dict>
+</array>
+</plist>
