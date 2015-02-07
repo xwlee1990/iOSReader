@@ -235,7 +235,15 @@
  */
 + (UIImage *)fetchCategoryAvatar:(IRCategoryModel *)category
 {
-    UIImage * avatarImage=[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:category.categoryIndex ofType:@"jpg"]];
+    UIImage * avatarImage;
+    if (category.categoryType ==IRCategoryTypeBlog){
+    avatarImage=[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:category.categoryIndex ofType:@"jpg"]];
+    }
+    else
+    {
+        avatarImage=[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:category.categoryIndex ofType:@"png"]];
+    
+    }
     return avatarImage==nil?[UIImage imageNamed:@"IRdefaultAvatar"]:avatarImage;
 }
 @end

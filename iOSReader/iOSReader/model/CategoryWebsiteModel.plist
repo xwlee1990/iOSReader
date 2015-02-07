@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>categoryIndex</key>
-		<string>0</string>
+		<string>web0</string>
 		<key>categoryUrl</key>
 		<string>http://objcio.cn/</string>
 		<key>categoryTitle</key>
@@ -14,7 +14,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>1</string>
+		<string>web1</string>
 		<key>categoryUrl</key>
 		<string>https://www.cocoacontrols.com/</string>
 		<key>categoryTitle</key>
@@ -24,7 +24,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>2</string>
+		<string>web2</string>
 		<key>categoryUrl</key>
 		<string>http://www.pttrns.com/</string>
 		<key>categoryTitle</key>
@@ -34,7 +34,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>3</string>
+		<string>web3</string>
 		<key>categoryUrl</key>
 		<string>http://stackoverflow.com/questions/tagged/ios</string>
 		<key>categoryTitle</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>4</string>
+		<string>web4</string>
 		<key>categoryUrl</key>
 		<string>http://www.cocoachina.com/ios/</string>
 		<key>categoryTitle</key>
@@ -54,7 +54,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>5</string>
+		<string>web5</string>
 		<key>categoryUrl</key>
 		<string>http://www.cocoachina.com/cms/plus/search.php?keyword=%E6%BA%90%E7%A0%81%E6%8E%A8%E8%8D%90&amp;searchtype=titlekeyword&amp;channeltype=0&amp;orderby=&amp;kwtype=0&amp;pagesize=10&amp;typeid=0&amp;TotalResult=161&amp;PageNo=1</string>
 		<key>categoryTitle</key>
@@ -64,7 +64,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>6</string>
+		<string>web6</string>
 		<key>categoryUrl</key>
 		<string>http://www.raywenderlich.com</string>
 		<key>categoryTitle</key>
@@ -74,7 +74,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>7</string>
+		<string>web7</string>
 		<key>categoryUrl</key>
 		<string>http://iosdevelopertips.com/</string>
 		<key>categoryTitle</key>
@@ -84,7 +84,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>8</string>
+		<string>web8</string>
 		<key>categoryUrl</key>
 		<string>http://nshipster.cn/</string>
 		<key>categoryTitle</key>
@@ -94,7 +94,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>9</string>
+		<string>web9</string>
 		<key>categoryUrl</key>
 		<string>http://iosdevweekly.com/</string>
 		<key>categoryTitle</key>
@@ -104,7 +104,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>10</string>
+		<string>web10</string>
 		<key>categoryUrl</key>
 		<string>http://subjc.com/</string>
 		<key>categoryTitle</key>

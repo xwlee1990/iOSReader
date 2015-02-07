@@ -109,6 +109,12 @@
 		D90C1AEB1A83C6100060C523 /* UITabBarSettingSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAC1A83C6100060C523 /* UITabBarSettingSelected@2x.png */; };
 		D90C1AEC1A83C6100060C523 /* UITarBarSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAD1A83C6100060C523 /* UITarBarSetting@2x.png */; };
 		D90C1AEE1A83C83B0060C523 /* LaunchScreenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AED1A83C83B0060C523 /* LaunchScreenImage.png */; };
+		D90C1AF41A86851E0060C523 /* web0.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AEF1A86851E0060C523 /* web0.png */; };
+		D90C1AF51A86851E0060C523 /* web1.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AF01A86851E0060C523 /* web1.png */; };
+		D90C1AF61A86851E0060C523 /* web2.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AF11A86851E0060C523 /* web2.png */; };
+		D90C1AF71A86851E0060C523 /* web3.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AF21A86851E0060C523 /* web3.png */; };
+		D90C1AF81A86851E0060C523 /* web4.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AF31A86851E0060C523 /* web4.png */; };
+		D90C1AFC1A8693CE0060C523 /* deleteIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AFB1A8693CE0060C523 /* deleteIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +264,12 @@
 		D90C1AAC1A83C6100060C523 /* UITabBarSettingSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITabBarSettingSelected@2x.png"; sourceTree = "<group>"; };
 		D90C1AAD1A83C6100060C523 /* UITarBarSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITarBarSetting@2x.png"; sourceTree = "<group>"; };
 		D90C1AED1A83C83B0060C523 /* LaunchScreenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenImage.png; sourceTree = "<group>"; };
+		D90C1AEF1A86851E0060C523 /* web0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web0.png; sourceTree = "<group>"; };
+		D90C1AF01A86851E0060C523 /* web1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web1.png; sourceTree = "<group>"; };
+		D90C1AF11A86851E0060C523 /* web2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web2.png; sourceTree = "<group>"; };
+		D90C1AF21A86851E0060C523 /* web3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web3.png; sourceTree = "<group>"; };
+		D90C1AF31A86851E0060C523 /* web4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web4.png; sourceTree = "<group>"; };
+		D90C1AFB1A8693CE0060C523 /* deleteIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteIcon@2x.png"; sourceTree = "<group>"; };
 		E82B27C09351E8A3CBCE1E2C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -608,6 +620,7 @@
 				D90C1A6D1A83C6100060C523 /* backbutton.png */,
 				D90C1A6E1A83C6100060C523 /* backbutton@2x.png */,
 				D90C1A6F1A83C6100060C523 /* backbutton@3x.png */,
+				D90C1AFB1A8693CE0060C523 /* deleteIcon@2x.png */,
 				D90C1A701A83C6100060C523 /* check@2x.png */,
 				D90C1A711A83C6100060C523 /* forwardbutton.png */,
 				D90C1A721A83C6100060C523 /* forwardbutton@2x.png */,
@@ -633,6 +646,11 @@
 		D90C1A741A83C6100060C523 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				D90C1AEF1A86851E0060C523 /* web0.png */,
+				D90C1AF01A86851E0060C523 /* web1.png */,
+				D90C1AF11A86851E0060C523 /* web2.png */,
+				D90C1AF21A86851E0060C523 /* web3.png */,
+				D90C1AF31A86851E0060C523 /* web4.png */,
 				D90C1A751A83C6100060C523 /* blog0.jpg */,
 				D90C1A761A83C6100060C523 /* blog1.jpg */,
 				D90C1A771A83C6100060C523 /* blog10.jpg */,
@@ -805,6 +823,7 @@
 				D90C1ABC1A83C6100060C523 /* blog18.jpg in Resources */,
 				D90C1ACB1A83C6100060C523 /* blog34.jpg in Resources */,
 				D90C1ADE1A83C6100060C523 /* safari@2x.png in Resources */,
+				D90C1AF61A86851E0060C523 /* web2.png in Resources */,
 				D90C1AC01A83C6100060C523 /* blog21.jpg in Resources */,
 				D90C1A5B1A83BEDD0060C523 /* articleModel.plist in Resources */,
 				D90C19DB1A83BE330060C523 /* LaunchScreen.xib in Resources */,
@@ -824,6 +843,7 @@
 				D90C1A5C1A83BEDD0060C523 /* CategoryBlogModel.plist in Resources */,
 				D90C1AEB1A83C6100060C523 /* UITabBarSettingSelected@2x.png in Resources */,
 				D90C1AC31A83C6100060C523 /* blog24.jpg in Resources */,
+				D90C1AF51A86851E0060C523 /* web1.png in Resources */,
 				D90C1ADB1A83C6100060C523 /* launchImageview.png in Resources */,
 				D90C1A581A83BEDD0060C523 /* .gitkeep in Resources */,
 				D90C1A651A83BEDD0060C523 /* IRMainNavigate.storyboard in Resources */,
@@ -835,9 +855,13 @@
 				D90C1AE41A83C6100060C523 /* IRHome@2x.png in Resources */,
 				D90C19D81A83BE330060C523 /* Images.xcassets in Resources */,
 				D90C1AE81A83C6100060C523 /* UITabBarAppBrowse@2x.png in Resources */,
+				D90C1AF41A86851E0060C523 /* web0.png in Resources */,
+				D90C1AFC1A8693CE0060C523 /* deleteIcon@2x.png in Resources */,
 				D90C1AEC1A83C6100060C523 /* UITarBarSetting@2x.png in Resources */,
+				D90C1AF81A86851E0060C523 /* web4.png in Resources */,
 				D90C1ABA1A83C6100060C523 /* blog14.jpg in Resources */,
 				D90C1AB71A83C6100060C523 /* blog10.jpg in Resources */,
+				D90C1AF71A86851E0060C523 /* web3.png in Resources */,
 				D90C1AB11A83C6100060C523 /* check@2x.png in Resources */,
 				D90C1ACA1A83C6100060C523 /* blog33.jpg in Resources */,
 				D90C1ACD1A83C6100060C523 /* blog37.jpg in Resources */,

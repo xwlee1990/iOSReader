@@ -50,9 +50,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-gJ-TLy">
-                                                    <rect key="frame" x="50" y="0.0" width="30" height="30"/>
-                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Button" backgroundImage="IRCollet.png">
+                                                    <rect key="frame" x="42" y="0.0" width="25" height="25"/>
+                                                    <state key="normal" title="Button" backgroundImage="deleteIcon.png">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -155,7 +155,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IRCollet.png" width="26" height="26"/>
+        <image name="deleteIcon.png" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
