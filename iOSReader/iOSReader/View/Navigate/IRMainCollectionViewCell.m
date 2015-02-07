@@ -14,8 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.contentView.backgroundColor = [UIColor clearColor];
-    
-   
+    self.deleteIcon.hidden = YES;
+
 }
 
 
@@ -26,4 +26,15 @@
     self.itemImageView.image = [IRDataMannager fetchCategoryAvatar:self.category];
 
 }
+
+- (IBAction)deleteAction:(id)sender {
+    
+    if (self.cellLongPressHandel) {
+        self.cellLongPressHandel();
+        self.deleteIcon.hidden = YES;
+    }
+    
+}
+
+
 @end

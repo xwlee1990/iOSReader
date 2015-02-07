@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class IRCategoryModel;
+typedef void (^cellLongPressHandle)();
 @interface IRMainCollectionViewCell : UICollectionViewCell
 /**
  *  标题
@@ -18,7 +19,10 @@
  */
 @property (nonatomic, weak) IBOutlet UIImageView *itemImageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *deleteIcon;
+
 @property (nonatomic, strong)IRCategoryModel *category;
 
+@property (nonatomic, copy)cellLongPressHandle cellLongPressHandel;
 
 @end

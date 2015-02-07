@@ -143,18 +143,10 @@
 
 }
 
-/**
- *  单个保存用户添加 常用分类数据到本地
- *
- *  @param category      待保存分类模型
- *  @param success       成功回调
- *  @param failure       失败回调
- *
- */
-- (void)savaUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
+- (NSString *)keyForCategoryType:(IRCategoryType)type
 {
-    NSString *key =nil;
-    switch (category.categoryType) {
+    NSString *key=nil;
+    switch (type) {
         case IRCategoryTypeBlog:
             key = @"userBlog";
             break;
@@ -167,6 +159,20 @@
         default:
             break;
     }
+
+    return key;
+}
+/**
+ *  单个保存用户添加 常用分类数据到本地
+ *
+ *  @param category      待保存分类模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)savaUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
+{
+    NSString *key =[self keyForCategoryType:category.categoryType];
     __block BOOL contains = NO;
     TMCache *cache = [TMCache sharedCache];
     NSMutableArray *tempArray = [cache objectForKey:key];
@@ -177,20 +183,30 @@
             contains = YES;
             *stop=YES;
             failure(@"已添加该对象");
-            
-            
         }
-        
     }];
     if (!contains) {
         [tempArray addObject:category];
         [cache setObject:tempArray forKey:key];
         success(@"保存成功");
     }
-    
-
 }
-
+/**
+ *  删除单个用户分类数据
+ *
+ *  @param category      待删除分类模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)deleteUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
+{
+    NSString *key =[self keyForCategoryType:category.categoryType];
+    TMCache *cache = [TMCache sharedCache];
+    NSMutableArray *tempArray = [cache objectForKey:key];
+    [cache setObject:tempArray forKey:key];
+    success(@"删除成功");
+}
 /**
  *  根据不同分类 获取不同标题
  */

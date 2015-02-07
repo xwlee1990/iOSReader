@@ -43,6 +43,25 @@
         IRMainCollectionViewCell *cell = (IRMainCollectionViewCell *)[self.mainCollectionView cellForItemAtIndexPath:indexPath];
         
         [self addShakeAnimationForView:cell.itemImageView withDuration:0.5];
+        cell.deleteIcon.hidden = NO;
+        weakify(self);
+        cell.cellLongPressHandel= ^{
+            strongify(self);
+          __block  IRCategoryModel * category = self.collectionArray[indexPath.section][indexPath.row];
+            [self.collectionArray[indexPath.section] removeObjectAtIndex:indexPath.item];
+            [self.mainCollectionView performBatchUpdates:^{
+                [self.mainCollectionView deleteItemsAtIndexPaths:@[indexPath]];
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [[IRDataMannager sharedManager] deleteUserCategoryData:category WithSuccess:^(NSString *successStr) {
+                        NSLog(@"%@",successStr);
+                    } failure:^(NSString *errorStr) {
+                        NSLog(@"%@",errorStr);
+                    }];
+                }
+            }];
+            
+        };
     }
 }
 

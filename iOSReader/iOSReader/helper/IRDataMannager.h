@@ -71,6 +71,19 @@
  *
  */
 - (void)savaUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure;
+
+
+/**
+ *  删除单个用户分类数据
+ *
+ *  @param category      待删除分类模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)deleteUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure;
+
+
 /**
  *  根据不同分类 获取不同标题
  */
