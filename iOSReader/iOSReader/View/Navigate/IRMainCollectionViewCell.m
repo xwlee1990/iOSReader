@@ -30,7 +30,8 @@
 - (IBAction)deleteAction:(id)sender {
     
     if (self.cellLongPressHandel) {
-        self.cellLongPressHandel();
+      
+         self.cellLongPressHandel();
         self.deleteIcon.hidden = YES;
     }
     

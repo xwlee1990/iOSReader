@@ -33,6 +33,7 @@
     [self.mainCollectionView addGestureRecognizer:longPressReger];
 }
 
+
 #pragma mark - 处理头像长按手势
 - (void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
@@ -46,23 +47,40 @@
         
         [self addShakeAnimationForView:cell.itemImageView withDuration:0.5];
         cell.deleteIcon.hidden = NO;
+        
         weakify(self);
         cell.cellLongPressHandel= ^{
             strongify(self);
-          __block  IRCategoryModel * category = self.collectionArray[indexPath.section][indexPath.row];
-            [self.collectionArray[indexPath.section] removeObjectAtIndex:indexPath.item];
-            [self.mainCollectionView performBatchUpdates:^{
+            __block  IRCategoryModel * category = self.collectionArray[indexPath.section][indexPath.row];
+            NSString *tipMsg = [NSString stringWithFormat:@"是否将%@从首页移除",category.categoryTitle];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
+                                                                           message:tipMsg
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定"
+                       style:UIAlertActionStyleDestructive
+                     handler:^(UIAlertAction *action)
+            {
+                strongify(self);
+                [self.collectionArray[indexPath.section] removeObjectAtIndex:indexPath.item];
+                [self.mainCollectionView performBatchUpdates:^{
                 [self.mainCollectionView deleteItemsAtIndexPaths:@[indexPath]];
-            } completion:^(BOOL finished) {
-                if (finished) {
+            } completion:^(BOOL finished){
+                if (finished)
+               {
                     [[IRDataMannager sharedManager] deleteUserCategoryData:category WithSuccess:^(NSString *successStr) {
                         NSLog(@"%@",successStr);
                     } failure:^(NSString *errorStr) {
                         NSLog(@"%@",errorStr);
                     }];
-                }
-            }];
+               }
+            }];}]];
             
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                      style:UIAlertActionStyleCancel
+                                                    handler:nil]];
+          
+            
+            [self presentViewController:alert animated:YES completion:nil];
         };
     }
 }

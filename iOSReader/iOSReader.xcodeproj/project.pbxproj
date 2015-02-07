@@ -179,8 +179,8 @@
 		D90C1A031A83BEDD0060C523 /* IRAVOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRAVOSHelper.m; sourceTree = "<group>"; };
 		D90C1A041A83BEDD0060C523 /* IRDataMannager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRDataMannager.h; sourceTree = "<group>"; };
 		D90C1A051A83BEDD0060C523 /* IRDataMannager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRDataMannager.m; sourceTree = "<group>"; };
-		D90C1A061A83BEDD0060C523 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
-		D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		D90C1A061A83BEDD0060C523 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Positioning.h"; path = "../helper/UIView+Positioning.h"; sourceTree = "<group>"; };
+		D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "../helper/UIView+Positioning.m"; sourceTree = "<group>"; };
 		D90C1A0A1A83BEDD0060C523 /* KINWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KINWebBrowserViewController.h; sourceTree = "<group>"; };
 		D90C1A0B1A83BEDD0060C523 /* KINWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KINWebBrowserViewController.m; sourceTree = "<group>"; };
 		D90C1A0D1A83BEDD0060C523 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 		D90C1A2C1A83BEDD0060C523 /* CategoryWebsiteModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryWebsiteModel.plist; sourceTree = "<group>"; };
 		D90C1A2D1A83BEDD0060C523 /* IRCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRCategoryModel.h; sourceTree = "<group>"; };
 		D90C1A2E1A83BEDD0060C523 /* IRCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRCategoryModel.m; sourceTree = "<group>"; };
-		D90C1A331A83BEDD0060C523 /* UIColor+JH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JH.h"; sourceTree = "<group>"; };
-		D90C1A341A83BEDD0060C523 /* UIColor+JH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JH.m"; sourceTree = "<group>"; };
+		D90C1A331A83BEDD0060C523 /* UIColor+JH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+JH.h"; path = "../Others/Category/UIColor+JH.h"; sourceTree = "<group>"; };
+		D90C1A341A83BEDD0060C523 /* UIColor+JH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JH.m"; path = "../Others/Category/UIColor+JH.m"; sourceTree = "<group>"; };
 		D90C1A371A83BEDD0060C523 /* IRCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRCategoryCell.h; sourceTree = "<group>"; };
 		D90C1A381A83BEDD0060C523 /* IRCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRCategoryCell.m; sourceTree = "<group>"; };
 		D90C1A3B1A83BEDD0060C523 /* JHSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSwitchButton.h; sourceTree = "<group>"; };
@@ -321,10 +321,14 @@
 		0489398E1A8681E800727F26 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				D90C1A331A83BEDD0060C523 /* UIColor+JH.h */,
+				D90C1A341A83BEDD0060C523 /* UIColor+JH.m */,
 				0489398F1A8681E800727F26 /* JHPlaceHolderTextView.h */,
 				048939901A8681E800727F26 /* JHPlaceHolderTextView.m */,
 				048939A51A86849A00727F26 /* IRClearCache.h */,
 				048939A61A86849A00727F26 /* IRClearCache.m */,
+				D90C1A061A83BEDD0060C523 /* UIView+Positioning.h */,
+				D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -375,7 +379,6 @@
 				D90C1A011A83BEDD0060C523 /* helper */,
 				D90C1A081A83BEDD0060C523 /* libs */,
 				D90C1A271A83BEDD0060C523 /* model */,
-				D90C1A2F1A83BEDD0060C523 /* Others */,
 				D90C19CE1A83BE330060C523 /* AppDelegate.h */,
 				D90C19CF1A83BE330060C523 /* AppDelegate.m */,
 				D90C1A681A83BEFE0060C523 /* IRDefineHeader.h */,
@@ -489,8 +492,6 @@
 				D90C1A031A83BEDD0060C523 /* IRAVOSHelper.m */,
 				D90C1A041A83BEDD0060C523 /* IRDataMannager.h */,
 				D90C1A051A83BEDD0060C523 /* IRDataMannager.m */,
-				D90C1A061A83BEDD0060C523 /* UIView+Positioning.h */,
-				D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -586,23 +587,6 @@
 				D90C1A2E1A83BEDD0060C523 /* IRCategoryModel.m */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		D90C1A2F1A83BEDD0060C523 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				D90C1A321A83BEDD0060C523 /* Category */,
-			);
-			path = Others;
-			sourceTree = "<group>";
-		};
-		D90C1A321A83BEDD0060C523 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				D90C1A331A83BEDD0060C523 /* UIColor+JH.h */,
-				D90C1A341A83BEDD0060C523 /* UIColor+JH.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		D90C1A351A83BEDD0060C523 /* View */ = {
