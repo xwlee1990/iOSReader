@@ -25,6 +25,8 @@
     [super viewDidLoad];
     self.mainCollectionView.delegate = self;
     self.mainCollectionView.dataSource = self;
+    [self.mainCollectionView setBackgroundColor:IRGlobalBg];
+    
     UILongPressGestureRecognizer *longPressReger = [[UILongPressGestureRecognizer alloc]
                                                     initWithTarget:self action:@selector(handleLongPress:)];
     longPressReger.minimumPressDuration = 1.0;

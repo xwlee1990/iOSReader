@@ -16,6 +16,7 @@
 #import "articleModel.h"
 #import "IRCategoryModel.h"
 #import "IRAVOSHelper.h"
+#import "IRDefineHeader.h"
 #define AVOSCloudAppID  @"lv9a61q2rymr4gpnedq4spsee61vji7qjnmnwfpg198mb5hu"
 #define AVOSCloudAppKey @"53lwe465unijak5wf8lo8auzl08rr1vf9khmwvmfilhh92i9"
 
@@ -28,6 +29,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 判断是否是第一次启动
+    [self firstLaunchJudge];
     
     //设置AVOSCloud
     [AVOSCloud setApplicationId:AVOSCloudAppID
@@ -144,6 +148,29 @@
     }
     
     return _tabBarController;
+}
+
+- (void)firstLaunchJudge
+{
+    //判断用户是不是第一次启动程序
+    if (![UserDefaults boolForKey:@"everLaunched"]) {
+        
+        [UserDefaults setBool:YES forKey:@"everLaunched"];
+        [UserDefaults setBool:YES forKey:@"firstLaunch"];
+        
+        // 开关
+        [UserDefaults setBool:YES forKey:@"imageDownloadSwitch"];
+        [UserDefaults setBool:YES forKey:@"blogSendSwitch"];
+        [UserDefaults setBool:YES forKey:@"webSendSwitch"];
+        [UserDefaults setBool:YES forKey:@"openSendSwitch"];
+        [UserDefaults setBool:YES forKey:@"blogDownloadSwitch"];
+        [UserDefaults setBool:YES forKey:@"webDownloadSwitch"];
+        [UserDefaults setBool:YES forKey:@"openDownloadSwitch"];
+        
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    }
 }
 
 @end
