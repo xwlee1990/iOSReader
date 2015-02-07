@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048939911A8681E800727F26 /* JHPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939901A8681E800727F26 /* JHPlaceHolderTextView.m */; };
+		0489399C1A8682C400727F26 /* JHAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939931A8682C400727F26 /* JHAboutMeViewController.m */; };
+		0489399D1A8682C400727F26 /* JHAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048939941A8682C400727F26 /* JHAboutMeViewController.xib */; };
+		0489399E1A8682C400727F26 /* JHFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939961A8682C400727F26 /* JHFeedBackViewController.m */; };
+		0489399F1A8682C400727F26 /* JHFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048939971A8682C400727F26 /* JHFeedBackViewController.xib */; };
+		048939A01A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939991A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m */; };
+		048939A11A8682C400727F26 /* JHSendSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489399B1A8682C400727F26 /* JHSendSettingViewController.m */; };
+		048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939A31A86830800727F26 /* JHSettingTableViewCell.m */; };
+		048939A71A86849A00727F26 /* IRClearCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939A61A86849A00727F26 /* IRClearCache.m */; };
 		8609B53C9FE9C0AC4666327E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C32B3FE4B43B4CE56864354 /* libPods.a */; };
 		D90C19CD1A83BE330060C523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CC1A83BE330060C523 /* main.m */; };
 		D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CF1A83BE330060C523 /* AppDelegate.m */; };
@@ -122,6 +131,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0489398F1A8681E800727F26 /* JHPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPlaceHolderTextView.h; sourceTree = "<group>"; };
+		048939901A8681E800727F26 /* JHPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPlaceHolderTextView.m; sourceTree = "<group>"; };
+		048939921A8682C400727F26 /* JHAboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAboutMeViewController.h; sourceTree = "<group>"; };
+		048939931A8682C400727F26 /* JHAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAboutMeViewController.m; sourceTree = "<group>"; };
+		048939941A8682C400727F26 /* JHAboutMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHAboutMeViewController.xib; sourceTree = "<group>"; };
+		048939951A8682C400727F26 /* JHFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHFeedBackViewController.h; sourceTree = "<group>"; };
+		048939961A8682C400727F26 /* JHFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHFeedBackViewController.m; sourceTree = "<group>"; };
+		048939971A8682C400727F26 /* JHFeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHFeedBackViewController.xib; sourceTree = "<group>"; };
+		048939981A8682C400727F26 /* JHOfflineBrowsingSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOfflineBrowsingSettingViewController.h; sourceTree = "<group>"; };
+		048939991A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOfflineBrowsingSettingViewController.m; sourceTree = "<group>"; };
+		0489399A1A8682C400727F26 /* JHSendSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSendSettingViewController.h; sourceTree = "<group>"; };
+		0489399B1A8682C400727F26 /* JHSendSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHSendSettingViewController.m; sourceTree = "<group>"; };
+		048939A21A86830800727F26 /* JHSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSettingTableViewCell.h; sourceTree = "<group>"; };
+		048939A31A86830800727F26 /* JHSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHSettingTableViewCell.m; sourceTree = "<group>"; };
+		048939A51A86849A00727F26 /* IRClearCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRClearCache.h; sourceTree = "<group>"; };
+		048939A61A86849A00727F26 /* IRClearCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRClearCache.m; sourceTree = "<group>"; };
 		2C32B3FE4B43B4CE56864354 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6974993BCDA6B6CB118CB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D90C19C71A83BE330060C523 /* iOSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +306,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0489398E1A8681E800727F26 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0489398F1A8681E800727F26 /* JHPlaceHolderTextView.h */,
+				048939901A8681E800727F26 /* JHPlaceHolderTextView.m */,
+				048939A51A86849A00727F26 /* IRClearCache.h */,
+				048939A61A86849A00727F26 /* IRClearCache.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		5A4E705F8339ECA723C77EF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +357,7 @@
 		D90C19C91A83BE330060C523 /* iOSReader */ = {
 			isa = PBXGroup;
 			children = (
+				0489398E1A8681E800727F26 /* Util */,
 				D90C1A351A83BEDD0060C523 /* View */,
 				D90C19F01A83BEDD0060C523 /* Controller */,
 				D90C1A011A83BEDD0060C523 /* helper */,
@@ -419,6 +456,16 @@
 			children = (
 				D90C19FF1A83BEDD0060C523 /* IRSettingViewController.h */,
 				D90C1A001A83BEDD0060C523 /* IRSettingViewController.m */,
+				048939921A8682C400727F26 /* JHAboutMeViewController.h */,
+				048939931A8682C400727F26 /* JHAboutMeViewController.m */,
+				048939941A8682C400727F26 /* JHAboutMeViewController.xib */,
+				048939951A8682C400727F26 /* JHFeedBackViewController.h */,
+				048939961A8682C400727F26 /* JHFeedBackViewController.m */,
+				048939971A8682C400727F26 /* JHFeedBackViewController.xib */,
+				048939981A8682C400727F26 /* JHOfflineBrowsingSettingViewController.h */,
+				048939991A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m */,
+				0489399A1A8682C400727F26 /* JHSendSettingViewController.h */,
+				0489399B1A8682C400727F26 /* JHSendSettingViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -598,6 +645,8 @@
 		D90C1A441A83BEDD0060C523 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				048939A21A86830800727F26 /* JHSettingTableViewCell.h */,
+				048939A31A86830800727F26 /* JHSettingTableViewCell.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -788,6 +837,7 @@
 				D90C1AC21A83C6100060C523 /* blog23.jpg in Resources */,
 				D90C1AB21A83C6100060C523 /* forwardbutton.png in Resources */,
 				D90C1AB81A83C6100060C523 /* blog11.jpg in Resources */,
+				0489399D1A8682C400727F26 /* JHAboutMeViewController.xib in Resources */,
 				D90C1AD41A83C6100060C523 /* blog44.jpg in Resources */,
 				D90C1AE31A83C6100060C523 /* IRCollet_blue@2x.png in Resources */,
 				D90C1AE21A83C6100060C523 /* IRCollet@2x.png in Resources */,
@@ -803,6 +853,7 @@
 				D90C1ABD1A83C6100060C523 /* blog19.jpg in Resources */,
 				D90C1AC71A83C6100060C523 /* blog3.jpg in Resources */,
 				D90C1ABC1A83C6100060C523 /* blog18.jpg in Resources */,
+				0489399F1A8682C400727F26 /* JHFeedBackViewController.xib in Resources */,
 				D90C1ACB1A83C6100060C523 /* blog34.jpg in Resources */,
 				D90C1ADE1A83C6100060C523 /* safari@2x.png in Resources */,
 				D90C1AC01A83C6100060C523 /* blog21.jpg in Resources */,
@@ -891,9 +942,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048939A01A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m in Sources */,
+				048939A11A8682C400727F26 /* JHSendSettingViewController.m in Sources */,
 				D90C1A571A83BEDD0060C523 /* PlistModel.m in Sources */,
 				D90C1A561A83BEDD0060C523 /* ODRefreshControl.m in Sources */,
 				D90C1A531A83BEDD0060C523 /* NSObject+MJCoding.m in Sources */,
+				0489399E1A8682C400727F26 /* JHFeedBackViewController.m in Sources */,
 				D90C1A601A83BEDD0060C523 /* UIColor+JH.m in Sources */,
 				D90C1A551A83BEDD0060C523 /* NSObject+MJKeyValue.m in Sources */,
 				D90C1A511A83BEDD0060C523 /* MJIvar.m in Sources */,
@@ -902,10 +956,13 @@
 				D90C1A481A83BEDD0060C523 /* IRMainViewController.m in Sources */,
 				D90C1A4C1A83BEDD0060C523 /* IRDataMannager.m in Sources */,
 				D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */,
+				048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */,
 				D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */,
 				D90C1A541A83BEDD0060C523 /* NSObject+MJIvar.m in Sources */,
 				D90C1A4B1A83BEDD0060C523 /* IRAVOSHelper.m in Sources */,
+				0489399C1A8682C400727F26 /* JHAboutMeViewController.m in Sources */,
 				D90C1A5A1A83BEDD0060C523 /* articleModel.m in Sources */,
+				048939911A8681E800727F26 /* JHPlaceHolderTextView.m in Sources */,
 				D90C1A461A83BEDD0060C523 /* IRCollectionViewController.m in Sources */,
 				D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */,
 				D90C1A4A1A83BEDD0060C523 /* IRSettingViewController.m in Sources */,
@@ -916,6 +973,7 @@
 				D90C19CD1A83BE330060C523 /* main.m in Sources */,
 				D90C1A631A83BEDD0060C523 /* IRMainCollectionHeaderView.m in Sources */,
 				D90C1A5E1A83BEDD0060C523 /* IRCategoryModel.m in Sources */,
+				048939A71A86849A00727F26 /* IRClearCache.m in Sources */,
 				D90C1A4F1A83BEDD0060C523 /* MJConst.m in Sources */,
 				D90C1A611A83BEDD0060C523 /* IRCategoryCell.m in Sources */,
 				D90C1A621A83BEDD0060C523 /* JHSwitchButton.m in Sources */,
@@ -986,7 +1044,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1021,7 +1079,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1034,6 +1092,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1045,6 +1104,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1063,6 +1123,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = iOSReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSReader.app/iOSReader";
@@ -1078,6 +1139,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = iOSReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSReader.app/iOSReader";
