@@ -13,7 +13,7 @@
 #import <SWTableViewCell.h>
 #import "IRDataMannager.h"
 #import "IRDefineHeader.h"
-#import "ODRefreshControl.h"
+
 @interface IRCategoryTableViewController ()<SWTableViewCellDelegate
 ,UISearchResultsUpdating, UISearchBarDelegate,KINWebBrowserDelegate>
 
@@ -31,9 +31,6 @@
     [super viewDidLoad];
     
     [self setupSearchController];
-    //添加下拉刷新
-    ODRefreshControl *refreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
-    [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 }
 
 
@@ -57,16 +54,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
-#pragma mark - 下拉刷新回调
-
-- (void)dropViewDidBeginRefreshing:(ODRefreshControl *)refreshControl
-{
-    double delayInSeconds = 3.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [refreshControl endRefreshing];
-    });
-}
 
 #pragma mark - 获取本地数据
 /**

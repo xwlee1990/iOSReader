@@ -31,15 +31,6 @@
 		D90C1A4C1A83BEDD0060C523 /* IRDataMannager.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A051A83BEDD0060C523 /* IRDataMannager.m */; };
 		D90C1A4D1A83BEDD0060C523 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */; };
 		D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A0B1A83BEDD0060C523 /* KINWebBrowserViewController.m */; };
-		D90C1A4F1A83BEDD0060C523 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A0E1A83BEDD0060C523 /* MJConst.m */; };
-		D90C1A501A83BEDD0060C523 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A111A83BEDD0060C523 /* MJFoundation.m */; };
-		D90C1A511A83BEDD0060C523 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A131A83BEDD0060C523 /* MJIvar.m */; };
-		D90C1A521A83BEDD0060C523 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A151A83BEDD0060C523 /* MJType.m */; };
-		D90C1A531A83BEDD0060C523 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A171A83BEDD0060C523 /* NSObject+MJCoding.m */; };
-		D90C1A541A83BEDD0060C523 /* NSObject+MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A191A83BEDD0060C523 /* NSObject+MJIvar.m */; };
-		D90C1A551A83BEDD0060C523 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A1B1A83BEDD0060C523 /* NSObject+MJKeyValue.m */; };
-		D90C1A561A83BEDD0060C523 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A1E1A83BEDD0060C523 /* ODRefreshControl.m */; };
-		D90C1A571A83BEDD0060C523 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A211A83BEDD0060C523 /* PlistModel.m */; };
 		D90C1A581A83BEDD0060C523 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D90C1A241A83BEDD0060C523 /* .gitkeep */; };
 		D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A261A83BEDD0060C523 /* TUSafariActivity.m */; };
 		D90C1A5A1A83BEDD0060C523 /* articleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A291A83BEDD0060C523 /* articleModel.m */; };
@@ -183,25 +174,6 @@
 		D90C1A071A83BEDD0060C523 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "../helper/UIView+Positioning.m"; sourceTree = "<group>"; };
 		D90C1A0A1A83BEDD0060C523 /* KINWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KINWebBrowserViewController.h; sourceTree = "<group>"; };
 		D90C1A0B1A83BEDD0060C523 /* KINWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KINWebBrowserViewController.m; sourceTree = "<group>"; };
-		D90C1A0D1A83BEDD0060C523 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
-		D90C1A0E1A83BEDD0060C523 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
-		D90C1A0F1A83BEDD0060C523 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
-		D90C1A101A83BEDD0060C523 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
-		D90C1A111A83BEDD0060C523 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
-		D90C1A121A83BEDD0060C523 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
-		D90C1A131A83BEDD0060C523 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
-		D90C1A141A83BEDD0060C523 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
-		D90C1A151A83BEDD0060C523 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
-		D90C1A161A83BEDD0060C523 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		D90C1A171A83BEDD0060C523 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		D90C1A181A83BEDD0060C523 /* NSObject+MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJIvar.h"; sourceTree = "<group>"; };
-		D90C1A191A83BEDD0060C523 /* NSObject+MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJIvar.m"; sourceTree = "<group>"; };
-		D90C1A1A1A83BEDD0060C523 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		D90C1A1B1A83BEDD0060C523 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		D90C1A1D1A83BEDD0060C523 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
-		D90C1A1E1A83BEDD0060C523 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
-		D90C1A201A83BEDD0060C523 /* PlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistModel.h; sourceTree = "<group>"; };
-		D90C1A211A83BEDD0060C523 /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
 		D90C1A241A83BEDD0060C523 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D90C1A251A83BEDD0060C523 /* TUSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSafariActivity.h; sourceTree = "<group>"; };
 		D90C1A261A83BEDD0060C523 /* TUSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSafariActivity.m; sourceTree = "<group>"; };
@@ -500,9 +472,6 @@
 			isa = PBXGroup;
 			children = (
 				D90C1A091A83BEDD0060C523 /* KINWebBrowser */,
-				D90C1A0C1A83BEDD0060C523 /* MJExtension */,
-				D90C1A1C1A83BEDD0060C523 /* ODRefreshControl */,
-				D90C1A1F1A83BEDD0060C523 /* PlistModel */,
 				D90C1A221A83BEDD0060C523 /* TUSafariActivity */,
 			);
 			path = libs;
@@ -515,46 +484,6 @@
 				D90C1A0B1A83BEDD0060C523 /* KINWebBrowserViewController.m */,
 			);
 			path = KINWebBrowser;
-			sourceTree = "<group>";
-		};
-		D90C1A0C1A83BEDD0060C523 /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				D90C1A0D1A83BEDD0060C523 /* MJConst.h */,
-				D90C1A0E1A83BEDD0060C523 /* MJConst.m */,
-				D90C1A0F1A83BEDD0060C523 /* MJExtension.h */,
-				D90C1A101A83BEDD0060C523 /* MJFoundation.h */,
-				D90C1A111A83BEDD0060C523 /* MJFoundation.m */,
-				D90C1A121A83BEDD0060C523 /* MJIvar.h */,
-				D90C1A131A83BEDD0060C523 /* MJIvar.m */,
-				D90C1A141A83BEDD0060C523 /* MJType.h */,
-				D90C1A151A83BEDD0060C523 /* MJType.m */,
-				D90C1A161A83BEDD0060C523 /* NSObject+MJCoding.h */,
-				D90C1A171A83BEDD0060C523 /* NSObject+MJCoding.m */,
-				D90C1A181A83BEDD0060C523 /* NSObject+MJIvar.h */,
-				D90C1A191A83BEDD0060C523 /* NSObject+MJIvar.m */,
-				D90C1A1A1A83BEDD0060C523 /* NSObject+MJKeyValue.h */,
-				D90C1A1B1A83BEDD0060C523 /* NSObject+MJKeyValue.m */,
-			);
-			path = MJExtension;
-			sourceTree = "<group>";
-		};
-		D90C1A1C1A83BEDD0060C523 /* ODRefreshControl */ = {
-			isa = PBXGroup;
-			children = (
-				D90C1A1D1A83BEDD0060C523 /* ODRefreshControl.h */,
-				D90C1A1E1A83BEDD0060C523 /* ODRefreshControl.m */,
-			);
-			path = ODRefreshControl;
-			sourceTree = "<group>";
-		};
-		D90C1A1F1A83BEDD0060C523 /* PlistModel */ = {
-			isa = PBXGroup;
-			children = (
-				D90C1A201A83BEDD0060C523 /* PlistModel.h */,
-				D90C1A211A83BEDD0060C523 /* PlistModel.m */,
-			);
-			path = PlistModel;
 			sourceTree = "<group>";
 		};
 		D90C1A221A83BEDD0060C523 /* TUSafariActivity */ = {
@@ -952,21 +881,14 @@
 			files = (
 				048939A01A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m in Sources */,
 				048939A11A8682C400727F26 /* JHSendSettingViewController.m in Sources */,
-				D90C1A571A83BEDD0060C523 /* PlistModel.m in Sources */,
-				D90C1A561A83BEDD0060C523 /* ODRefreshControl.m in Sources */,
-				D90C1A531A83BEDD0060C523 /* NSObject+MJCoding.m in Sources */,
 				0489399E1A8682C400727F26 /* JHFeedBackViewController.m in Sources */,
 				D90C1A601A83BEDD0060C523 /* UIColor+JH.m in Sources */,
-				D90C1A551A83BEDD0060C523 /* NSObject+MJKeyValue.m in Sources */,
-				D90C1A511A83BEDD0060C523 /* MJIvar.m in Sources */,
 				D90C1A4D1A83BEDD0060C523 /* UIView+Positioning.m in Sources */,
-				D90C1A501A83BEDD0060C523 /* MJFoundation.m in Sources */,
 				D90C1A481A83BEDD0060C523 /* IRMainViewController.m in Sources */,
 				D90C1A4C1A83BEDD0060C523 /* IRDataMannager.m in Sources */,
 				D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */,
 				048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */,
 				D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */,
-				D90C1A541A83BEDD0060C523 /* NSObject+MJIvar.m in Sources */,
 				D90C1A4B1A83BEDD0060C523 /* IRAVOSHelper.m in Sources */,
 				0489399C1A8682C400727F26 /* JHAboutMeViewController.m in Sources */,
 				D90C1A5A1A83BEDD0060C523 /* articleModel.m in Sources */,
@@ -976,13 +898,11 @@
 				D90C1A4A1A83BEDD0060C523 /* IRSettingViewController.m in Sources */,
 				D90C1A451A83BEDD0060C523 /* IRCategoryTableViewController.m in Sources */,
 				D90C1A641A83BEDD0060C523 /* IRMainCollectionViewCell.m in Sources */,
-				D90C1A521A83BEDD0060C523 /* MJType.m in Sources */,
 				D90C1A471A83BEDD0060C523 /* IRSuperSearchTabelViewController.m in Sources */,
 				D90C19CD1A83BE330060C523 /* main.m in Sources */,
 				D90C1A631A83BEDD0060C523 /* IRMainCollectionHeaderView.m in Sources */,
 				D90C1A5E1A83BEDD0060C523 /* IRCategoryModel.m in Sources */,
 				048939A71A86849A00727F26 /* IRClearCache.m in Sources */,
-				D90C1A4F1A83BEDD0060C523 /* MJConst.m in Sources */,
 				D90C1A611A83BEDD0060C523 /* IRCategoryCell.m in Sources */,
 				D90C1A621A83BEDD0060C523 /* JHSwitchButton.m in Sources */,
 			);

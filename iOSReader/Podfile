@@ -1,5 +1,3 @@
-#状态栏一个通知提示
-pod 'JDStatusBarNotification'
 #提供内存和磁盘缓存支持
 pod 'TMCache', '~> 1.2.3'
 #后台数据
