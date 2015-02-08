@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IRCollectionViewController : UIViewController
+@interface IRCollectionViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *favouriteArray;
 @end

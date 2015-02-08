@@ -13,7 +13,7 @@
 #import "IRCategoryTableViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "IRDataMannager.h"
-#import "articleModel.h"
+#import "IRArticleModel.h"
 #import "IRCategoryModel.h"
 #import "IRAVOSHelper.h"
 #import "IRDefineHeader.h"
@@ -42,7 +42,7 @@
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     /* 重要! 注册子类 App生命周期内 只需要执行一次即可*/
-    [articleModel registerSubclass];
+    [IRArticleModel registerSubclass];
     [IRCategoryModel registerSubclass];
     
     //初始化用户数据

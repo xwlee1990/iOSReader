@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 com.ftxbird. All rights reserved.
 //
 
-#import "articleModel.h"
+#import "IRArticleModel.h"
 
-@implementation articleModel
+@implementation IRArticleModel
 
-@dynamic articleTitle,articleUrl,articleIndex;
+@dynamic articleTitle,articleUrl,articleIndex,articleSubContent,articleImageUrl;
 
 
 @end

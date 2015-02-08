@@ -14,7 +14,18 @@
 
 + (IRDataMannager *)sharedManager;
 
+
+/**
+ *  初始化用户首页数据
+ */
 + (NSMutableArray *)initUserData;
+
+/**
+ *  初始化用户收藏数据
+ */
++ (NSMutableArray *)initUserFavouriteData;
+
+
 /**
  *  从本地加载缓存程序分类数据
  *

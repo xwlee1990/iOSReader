@@ -14,9 +14,6 @@
 typedef void (^AddToMainBlock)(IRCategoryModel *addModel);
 @interface IRCategoryTableViewController : UITableViewController
 
-/**
- *  首页传过来的数组
- */
 @property (nonatomic, strong) NSArray *categoryArray;
 @property (nonatomic, copy)AddToMainBlock addToMainBlock;
 @property (nonatomic, assign)NSInteger categoryType;

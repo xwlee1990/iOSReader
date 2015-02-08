@@ -23,7 +23,7 @@
 }
 
 /**
- *  初始化用户数据
+ *  初始化首页用户数据
  */
 + (NSMutableArray *)initUserData
 {
@@ -45,6 +45,21 @@
     
      return [[NSMutableArray arrayWithObjects:userBlogArray,userWebArray,userGithubArray, nil] mutableCopy];
 }
+
+
+/**
+ *  初始化用户收藏数据
+ */
++ (NSMutableArray *)initUserFavouriteData
+{
+    NSMutableArray *userBlogArray = [[TMCache sharedCache] objectForKey:@"userFavourite"];
+    if (!userBlogArray) {
+        userBlogArray = [NSMutableArray array];
+        [[TMCache sharedCache] setObject:userBlogArray forKey:@"userFavourite"];
+    }
+    return [userBlogArray mutableCopy];
+}
+
 #pragma mark - 从本地加载
 
 /**

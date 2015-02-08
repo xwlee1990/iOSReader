@@ -33,7 +33,7 @@
 		D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A0B1A83BEDD0060C523 /* KINWebBrowserViewController.m */; };
 		D90C1A581A83BEDD0060C523 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D90C1A241A83BEDD0060C523 /* .gitkeep */; };
 		D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A261A83BEDD0060C523 /* TUSafariActivity.m */; };
-		D90C1A5A1A83BEDD0060C523 /* articleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A291A83BEDD0060C523 /* articleModel.m */; };
+		D90C1A5A1A83BEDD0060C523 /* IRArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1A291A83BEDD0060C523 /* IRArticleModel.m */; };
 		D90C1A5B1A83BEDD0060C523 /* articleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90C1A2A1A83BEDD0060C523 /* articleModel.plist */; };
 		D90C1A5C1A83BEDD0060C523 /* CategoryBlogModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90C1A2B1A83BEDD0060C523 /* CategoryBlogModel.plist */; };
 		D90C1A5D1A83BEDD0060C523 /* CategoryWebsiteModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90C1A2C1A83BEDD0060C523 /* CategoryWebsiteModel.plist */; };
@@ -118,6 +118,8 @@
 		D90C1B041A87442E0060C523 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1AFF1A87442E0060C523 /* SVIndefiniteAnimatedView.m */; };
 		D90C1B051A87442E0060C523 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D90C1B011A87442E0060C523 /* SVProgressHUD.bundle */; };
 		D90C1B061A87442E0060C523 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C1B031A87442E0060C523 /* SVProgressHUD.m */; };
+		D93A66BE1A87AB5600AE199C /* IRArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D93A66BC1A87AB5600AE199C /* IRArticleCell.m */; };
+		D93A66BF1A87AB5600AE199C /* IRArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93A66BD1A87AB5600AE199C /* IRArticleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,8 +182,8 @@
 		D90C1A241A83BEDD0060C523 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D90C1A251A83BEDD0060C523 /* TUSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSafariActivity.h; sourceTree = "<group>"; };
 		D90C1A261A83BEDD0060C523 /* TUSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSafariActivity.m; sourceTree = "<group>"; };
-		D90C1A281A83BEDD0060C523 /* articleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = articleModel.h; sourceTree = "<group>"; };
-		D90C1A291A83BEDD0060C523 /* articleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = articleModel.m; sourceTree = "<group>"; };
+		D90C1A281A83BEDD0060C523 /* IRArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRArticleModel.h; sourceTree = "<group>"; };
+		D90C1A291A83BEDD0060C523 /* IRArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRArticleModel.m; sourceTree = "<group>"; };
 		D90C1A2A1A83BEDD0060C523 /* articleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = articleModel.plist; sourceTree = "<group>"; };
 		D90C1A2B1A83BEDD0060C523 /* CategoryBlogModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryBlogModel.plist; sourceTree = "<group>"; };
 		D90C1A2C1A83BEDD0060C523 /* CategoryWebsiteModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryWebsiteModel.plist; sourceTree = "<group>"; };
@@ -275,6 +277,9 @@
 		D90C1B011A87442E0060C523 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		D90C1B021A87442E0060C523 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		D90C1B031A87442E0060C523 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		D93A66BB1A87AB5600AE199C /* IRArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRArticleCell.h; sourceTree = "<group>"; };
+		D93A66BC1A87AB5600AE199C /* IRArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRArticleCell.m; sourceTree = "<group>"; };
+		D93A66BD1A87AB5600AE199C /* IRArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRArticleCell.xib; sourceTree = "<group>"; };
 		E82B27C09351E8A3CBCE1E2C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -516,8 +521,8 @@
 		D90C1A271A83BEDD0060C523 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D90C1A281A83BEDD0060C523 /* articleModel.h */,
-				D90C1A291A83BEDD0060C523 /* articleModel.m */,
+				D90C1A281A83BEDD0060C523 /* IRArticleModel.h */,
+				D90C1A291A83BEDD0060C523 /* IRArticleModel.m */,
 				D90C1A2A1A83BEDD0060C523 /* articleModel.plist */,
 				D90C1A2B1A83BEDD0060C523 /* CategoryBlogModel.plist */,
 				D90C1A2C1A83BEDD0060C523 /* CategoryWebsiteModel.plist */,
@@ -551,6 +556,9 @@
 		D90C1A391A83BEDD0060C523 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				D93A66BB1A87AB5600AE199C /* IRArticleCell.h */,
+				D93A66BC1A87AB5600AE199C /* IRArticleCell.m */,
+				D93A66BD1A87AB5600AE199C /* IRArticleCell.xib */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -838,6 +846,7 @@
 				D90C1AB51A83C6100060C523 /* blog0.jpg in Resources */,
 				D90C1AB01A83C6100060C523 /* backbutton@3x.png in Resources */,
 				D90C1AE41A83C6100060C523 /* IRHome@2x.png in Resources */,
+				D93A66BF1A87AB5600AE199C /* IRArticleCell.xib in Resources */,
 				D90C19D81A83BE330060C523 /* Images.xcassets in Resources */,
 				D90C1AE81A83C6100060C523 /* UITabBarAppBrowse@2x.png in Resources */,
 				D90C1AF41A86851E0060C523 /* web0.png in Resources */,
@@ -910,10 +919,11 @@
 				D90C1A4C1A83BEDD0060C523 /* IRDataMannager.m in Sources */,
 				D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */,
 				048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */,
+				D93A66BE1A87AB5600AE199C /* IRArticleCell.m in Sources */,
 				D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */,
 				D90C1A4B1A83BEDD0060C523 /* IRAVOSHelper.m in Sources */,
 				0489399C1A8682C400727F26 /* JHAboutMeViewController.m in Sources */,
-				D90C1A5A1A83BEDD0060C523 /* articleModel.m in Sources */,
+				D90C1A5A1A83BEDD0060C523 /* IRArticleModel.m in Sources */,
 				048939911A8681E800727F26 /* JHPlaceHolderTextView.m in Sources */,
 				D90C1A461A83BEDD0060C523 /* IRCollectionViewController.m in Sources */,
 				D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */,
