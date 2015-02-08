@@ -31,8 +31,9 @@
 //
 
 #import "KINWebBrowserViewController.h"
-
+#import "IRDataMannager.h"
 #import "TUSafariActivity.h"
+#import "SVProgressHUD.h"
 //#import <ARChromeActivity/ARChromeActivity.h>
 
 static void *KINContext = &KINContext;
@@ -40,7 +41,7 @@ static void *KINContext = &KINContext;
 @interface KINWebBrowserViewController ()
 
 @property (nonatomic, assign) BOOL previousNavigationControllerToolbarHidden, previousNavigationControllerNavigationBarHidden;
-@property (nonatomic, strong) UIBarButtonItem *backButton, *forwardButton, *refreshButton, *stopButton, *actionButton, *fixedSeparator, *flexibleSeparator;
+@property (nonatomic, strong) UIBarButtonItem *backButton, *forwardButton, *refreshButton, *stopButton,*liekButton, *actionButton, *fixedSeparator, *flexibleSeparator;
 @property (nonatomic, strong) UIPopoverController *actionPopoverController;
 @property (nonatomic, strong) NSURL *uiWebViewCurrentURL;
 
@@ -251,6 +252,10 @@ static void *KINContext = &KINContext;
     
     if(!self.actionButtonHidden) {
         NSMutableArray *mutableBarButtonItems = [NSMutableArray arrayWithArray:barButtonItems];
+        if(self.showLikeButton){
+         [mutableBarButtonItems addObject:self.liekButton];
+         [mutableBarButtonItems addObject:self.flexibleSeparator];
+        }
         [mutableBarButtonItems addObject:self.actionButton];
         barButtonItems = [NSArray arrayWithArray:mutableBarButtonItems];
     }
@@ -263,6 +268,7 @@ static void *KINContext = &KINContext;
     self.stopButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(stopButtonPressed:)];
     self.backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backbutton"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed:)];
     self.forwardButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forwardbutton"] style:UIBarButtonItemStylePlain target:self action:@selector(forwardButtonPressed:)];
+     self.liekButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(likeButtonPressed:)];
     self.actionButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonPressed:)];
     self.fixedSeparator = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     self.fixedSeparator.width = 50.0f;
@@ -296,6 +302,18 @@ static void *KINContext = &KINContext;
 - (void)stopButtonPressed:(id)sender {
         [self.wkWebView stopLoading];
 }
+- (void)likeButtonPressed:(id)sender {
+   
+    [[IRDataMannager sharedManager] saveUserFavouriteArticleTitle:self.wkWebView.title ArticleUrl:self.wkWebView.URL.absoluteString WithSuccess:^(NSString *successStr,IRArticleModel *article) {
+        [SVProgressHUD showSuccessWithStatus:successStr];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"IRAddFavouriteNoti" object:article];
+        });
+    } failure:^(NSString *errorStr) {
+        [SVProgressHUD showErrorWithStatus:errorStr];
+    }];
+}
+
 
 - (void)actionButtonPressed:(id)sender {
     NSURL *URLForActivityItem;

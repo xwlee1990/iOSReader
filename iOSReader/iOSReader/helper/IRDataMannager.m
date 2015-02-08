@@ -60,6 +60,52 @@
     return [userBlogArray mutableCopy];
 }
 
+/**
+ *  保存用户喜欢的文章链接
+ *
+ *  @param title 标题
+ *  @param url   链接
+ */
+- (void)saveUserFavouriteArticleTitle:(NSString *)title ArticleUrl:(NSString *)url WithSuccess:(void (^)(NSString *successStr,IRArticleModel *article))success failure:(void (^)(NSString *errorStr))failure
+
+{
+    if (title.length==0 ||title==nil ||url.length==0||url==nil) {
+        failure(@"保存出错啦!!");
+    }
+    else
+    {
+        IRArticleModel *article = [IRArticleModel new];
+        article.articleTitle = title;
+        article.articleUrl = url;
+        NSString *key = @"userFavourite";
+        TMCache *cache = [TMCache sharedCache];
+        NSMutableArray *tempArray = [cache objectForKey:key];
+        [tempArray addObject:article];
+        [cache setObject:tempArray forKey:key];
+        //待完善,做些比较等
+        success(@"收藏成功",article);
+    }
+}
+
+/**
+ *  单个保存用户添加 文章链接 到收藏
+ *
+ *  @param article      待保存分类模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)saveUserFavouriteData:(IRArticleModel *)article  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
+{
+    NSString *key = @"userFavourite";
+    TMCache *cache = [TMCache sharedCache];
+    NSMutableArray *tempArray = [cache objectForKey:key];
+    [tempArray addObject:article];
+    [cache setObject:tempArray forKey:key];
+    //待完善,做些比较等
+    success(@"收藏成功");
+}
+
 #pragma mark - 从本地加载
 
 /**
@@ -206,6 +252,8 @@
         success(@"保存成功");
     }
 }
+
+
 /**
  *  删除单个用户分类数据
  *

@@ -12,7 +12,6 @@
 #import "KINWebBrowserViewController.h"
 #import "IRArticleCell.h"
 #import "IRDataMannager.h"
-#import "IRDefineHeader.h"
 #import "SVProgressHUD.h"
 @interface IRCollectionViewController ()<UISearchResultsUpdating, UISearchBarDelegate,KINWebBrowserDelegate>
 @property (nonatomic, strong) UISearchController *searchController; // 搜索控制器
@@ -28,9 +27,13 @@
     [super viewDidLoad];
     
     [self setupSearchController];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addFavourite:) name:@"IRAddFavouriteNoti" object:nil];
 }
 
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"IRAddFavouriteNoti" object:nil];
+}
 - (void)setupSearchController
 {
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.favouriteArray count]];
@@ -49,12 +52,26 @@
     self.definesPresentationContext = YES;
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"IRArticleCell" bundle:nil]
          forCellReuseIdentifier:@"ArticleCell"];
 }
 
 
+
+- (void)addFavourite:(NSNotification *)notification
+{
+    IRArticleModel *article = (IRArticleModel *)notification.object;
+    if (article) {
+        [self.favouriteArray addObject:article];
+//        [self.tableView beginUpdates];
+//        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [self.tableView endUpdates];
+//        [self.tableView scrollToRowAtIndexPath:newIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+    }
+
+}
 #pragma mark - 获取本地数据
 /**
  *  加载用户收藏数据
@@ -120,6 +137,8 @@
     KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
     [webBrowser setDelegate:self];
     webBrowser.hidesBottomBarWhenPushed=YES;
+    //不显示收藏按钮
+    webBrowser.showLikeButton =NO;
     [self.navigationController pushViewController:webBrowser animated:YES];
     
     if (article.articleUrl) {

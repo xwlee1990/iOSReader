@@ -140,6 +140,7 @@
     KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
     [webBrowser setDelegate:self];
     webBrowser.hidesBottomBarWhenPushed=YES;
+    webBrowser.showLikeButton=YES;
     [self.navigationController pushViewController:webBrowser animated:YES];
     
     if (category.categoryUrl) {

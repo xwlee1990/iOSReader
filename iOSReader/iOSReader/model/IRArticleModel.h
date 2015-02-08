@@ -8,7 +8,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <Foundation/Foundation.h>
 
-@interface IRArticleModel : AVObject<AVSubclassing>
+@interface IRArticleModel : AVObject<AVSubclassing,NSCoding>
 /**
  *  索引
  */

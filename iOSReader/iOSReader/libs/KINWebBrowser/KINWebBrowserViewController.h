@@ -109,6 +109,7 @@
 @property (nonatomic, assign) BOOL actionButtonHidden;
 @property (nonatomic, assign) BOOL showsURLInNavigationBar;
 @property (nonatomic, assign) BOOL showsPageTitleInNavigationBar;
+@property (nonatomic, assign) BOOL showLikeButton;
 
 #pragma mark - Public Interface
 

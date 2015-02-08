@@ -6,41 +6,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="54" id="KGk-i7-Jjw" customClass="IRArticleCell">
-            <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="IRArticleCell">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJt-xP-lbN" userLabel="title">
-                        <rect key="frame" x="10" y="5" width="307" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJt-xP-lbN" userLabel="title">
+                        <rect key="frame" x="30" y="7" width="309" height="49"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v1-3T-7cX" userLabel="url">
-                        <rect key="frame" x="10" y="32" width="307" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v1-3T-7cX" userLabel="url">
+                        <rect key="frame" x="30" y="56" width="329" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="eJt-xP-lbN" secondAttribute="trailing" constant="10" id="3Jr-t6-ZGH"/>
-                    <constraint firstItem="2v1-3T-7cX" firstAttribute="top" secondItem="eJt-xP-lbN" secondAttribute="bottom" constant="6" id="ItE-X2-Hul"/>
+                    <constraint firstAttribute="trailing" secondItem="eJt-xP-lbN" secondAttribute="trailing" constant="30" id="3Jr-t6-ZGH"/>
+                    <constraint firstItem="2v1-3T-7cX" firstAttribute="top" secondItem="eJt-xP-lbN" secondAttribute="bottom" id="ItE-X2-Hul"/>
                     <constraint firstAttribute="trailing" secondItem="2v1-3T-7cX" secondAttribute="trailing" constant="10" id="XsV-Dk-TiO"/>
-                    <constraint firstItem="eJt-xP-lbN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="g8D-3i-D5d"/>
-                    <constraint firstAttribute="bottom" secondItem="2v1-3T-7cX" secondAttribute="bottom" id="jRq-Kq-wxL"/>
-                    <constraint firstItem="2v1-3T-7cX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nLy-pA-mid"/>
-                    <constraint firstItem="eJt-xP-lbN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qFU-k7-A8j"/>
+                    <constraint firstItem="eJt-xP-lbN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="g8D-3i-D5d"/>
+                    <constraint firstAttribute="bottom" secondItem="2v1-3T-7cX" secondAttribute="bottom" constant="9" id="jRq-Kq-wxL"/>
+                    <constraint firstItem="2v1-3T-7cX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="nLy-pA-mid"/>
+                    <constraint firstItem="eJt-xP-lbN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="qFU-k7-A8j"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="titleLabel" destination="eJt-xP-lbN" id="vzq-yn-R4y"/>
                 <outlet property="urlLabel" destination="2v1-3T-7cX" id="bMT-dN-5ix"/>
             </connections>
-            <point key="canvasLocation" x="340.5" y="171"/>
+            <point key="canvasLocation" x="14.5" y="134"/>
         </tableViewCell>
     </objects>
 </document>

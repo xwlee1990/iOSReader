@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IRCategoryModel.h"
+#import "IRArticleModel.h"
 
 @interface IRDataMannager : NSObject
 
@@ -82,6 +83,25 @@
  *
  */
 - (void)savaUserCategoryData:(IRCategoryModel *)category  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure;
+
+/**
+ *  单个保存用户添加 文章链接 到本地
+ *
+ *  @param article      待保存分类模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)saveUserFavouriteData:(IRArticleModel *)article  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure;
+
+/**
+ *  保存用户喜欢的文章链接
+ *
+ *  @param title 标题
+ *  @param url   链接
+ */
+- (void)saveUserFavouriteArticleTitle:(NSString *)title ArticleUrl:(NSString *)url WithSuccess:(void (^)(NSString *successStr,IRArticleModel *article))success failure:(void (^)(NSString *errorStr))failure;
+
 
 
 /**
