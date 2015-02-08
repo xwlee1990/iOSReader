@@ -13,7 +13,7 @@
 #import "SVProgressHUD.h"
 #import "SVIndefiniteAnimatedView.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "UIColor+JH.h"
 NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
 NSString * const SVProgressHUDDidTouchDownInsideNotification = @"SVProgressHUDDidTouchDownInsideNotification";
 NSString * const SVProgressHUDWillDisappearNotification = @"SVProgressHUDWillDisappearNotification";
@@ -251,7 +251,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
         self.backgroundColor = [UIColor clearColor];
 		self.alpha = 0.0f;
         self.activityCount = 0;
-        SVProgressHUDBackgroundColor = [UIColor blueColor];
+        SVProgressHUDBackgroundColor = [UIColor colorWithHexString:@"#5CACEE"];
         SVProgressHUDForegroundColor = [UIColor whiteColor];
         if ([UIFont respondsToSelector:@selector(preferredFontForTextStyle:)]) {
             SVProgressHUDFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
@@ -660,7 +660,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
             self.hudView.alpha = 0;
         }
         
-        [UIView animateWithDuration:0.15
+        [UIView animateWithDuration:0.45
                               delay:0
                             options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
@@ -741,8 +741,8 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
                                                       userInfo:userInfo];
     
     self.activityCount = 0;
-    [UIView animateWithDuration:0.15
-                          delay:0
+    [UIView animateWithDuration:0.25
+                          delay:1.0
                         options:UIViewAnimationCurveEaseIn | UIViewAnimationOptionAllowUserInteraction
                      animations:^{
                          self.hudView.transform = CGAffineTransformScale(self.hudView.transform, 0.8f, 0.8f);

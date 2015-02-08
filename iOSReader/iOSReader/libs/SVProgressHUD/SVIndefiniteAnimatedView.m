@@ -7,7 +7,6 @@
 //
 
 #import "SVIndefiniteAnimatedView.h"
-
 #pragma mark SVIndefiniteAnimatedView
 
 @interface SVIndefiniteAnimatedView ()
