@@ -12,7 +12,7 @@
 #import "JHSettingTableViewCell.h"
 #import "JHOfflineBrowsingSettingViewController.h"
 
-@interface JHOfflineBrowsingSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface JHOfflineBrowsingSettingViewController ()<UITableViewDataSource, UITableViewDelegate, JHSettingTableViewCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *title_array;
@@ -34,10 +34,14 @@
     [self.view setBackgroundColor:IRGlobalBg];
     [self.navigationItem setTitle:@"离线设置"];
     
+    NSNumber *blogDownloadSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"blogDownloadSwitch"]];
+    NSNumber *webDownloadSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"webDownloadSwitch"]];
+    NSNumber *openDownloadSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"openDownloadSwitch"]];
+    
     self.title_array = @[
-                         @{@"title":@"博客", @"type":@"Switch"},
-                         @{@"title":@"网站", @"type":@"Switch"},
-                         @{@"title":@"开源", @"type":@"Switch"}
+                         @{@"title":@"博客离线阅读", @"type":@"Switch", @"subtype":blogDownloadSwitchNum},
+                         @{@"title":@"网站离线阅读", @"type":@"Switch", @"subtype":webDownloadSwitchNum},
+                         @{@"title":@"开源离线阅读", @"type":@"Switch", @"subtype":openDownloadSwitchNum}
                          ];
     
 }
@@ -69,10 +73,11 @@
 {
     NSDictionary *dictionary = self.title_array[indexPath.row];
     
-    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView];
-    
+    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView indexPath:indexPath];
+    cell.delegate = self;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.cell_type = dictionary[@"type"];
+    cell.isOpen = [dictionary[@"subtype"] boolValue];
     [cell.textLabel setText:dictionary[@"title"]];
     
     return cell;
@@ -92,6 +97,20 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return FLT_MIN;
+}
+
+- (void)settingTableViewCell:(JHSettingTableViewCell *)settingTableViewCell switchTypeChange:(UISwitch *)sender
+{
+    if (sender.tag == 0) {  // 微博推送
+        [UserDefaults setBool:sender.isOn forKey:@"blogDownloadSwitch"];
+        
+    }else if (sender.tag == 1){ // 网站推送
+        [UserDefaults setBool:sender.isOn forKey:@"webDownloadSwitch"];
+        
+    }else{  // 开源推送
+        [UserDefaults setBool:sender.isOn forKey:@"openDownloadSwitch"];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

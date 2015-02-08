@@ -34,18 +34,6 @@
     return self;
 }
 
-+ (instancetype)settingTableViewCellWithTableView:(UITableView *)tableView
-{
-    return [[JHSettingTableViewCell alloc] initWithTableView:tableView];
-}
-
-- (instancetype)initWithTableView:(UITableView *)tableView
-{
-    self = [[JHSettingTableViewCell alloc] init];
-    
-    return self;
-}
-
 - (void)setupContentWithType:(NSString *)type
 {
     if ([type isEqualToString:@"Arrow"]) {              // 箭头
@@ -54,6 +42,7 @@
         
     }else if ([type isEqualToString:@"Switch"]){    // 开关
         UISwitch *mySwitch = [[UISwitch alloc] init];
+        mySwitch.tag = self.indexPath.row;
         self.mySwitch = mySwitch;
         [mySwitch setOn:YES animated:NO];//设置初始为ON的一边
         [mySwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
@@ -91,7 +80,9 @@
 
 - (void)switchAction:(UISwitch *)sender
 {
-    NSLog(@"----------%d---------", sender.on);
+    if ([self.delegate respondsToSelector:@selector(settingTableViewCell:switchTypeChange:)]) {
+        [self.delegate settingTableViewCell:self switchTypeChange:sender];
+    }
 }
 
 // 设置Cell的类型
@@ -108,6 +99,13 @@
     _label_text = label_text;
     [self.myLabel setText:label_text];
     
+}
+
+// 设置开关
+- (void)setIsOpen:(BOOL)isOpen
+{
+    _isOpen = isOpen;
+    [self.mySwitch setOn:isOpen];
 }
 
 // 设置按钮标题

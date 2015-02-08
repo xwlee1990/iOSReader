@@ -11,7 +11,7 @@
 @implementation IRClearCache
 
 #pragma mark - ------------------------------缓存清理相关-----------------------
-+ (void)clearCache
+- (void)clearCache
 {
     dispatch_async(
                    dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
@@ -31,7 +31,9 @@
 
 -(void)clearCacheSuccess
 {
-    
+    if ([self.delegate respondsToSelector:@selector(clearCache:didClearCacheInfo:)]) {
+        [self.delegate clearCache:self didClearCacheInfo:nil];
+    }
 }
 
 //遍历文件夹获得文件夹大小，返回多少M

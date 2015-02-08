@@ -11,7 +11,7 @@
 
 #import "JHSettingTableViewCell.h"
 
-@interface JHSendSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface JHSendSettingViewController ()<UITableViewDataSource, UITableViewDelegate, JHSettingTableViewCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *title_array;
 @end
@@ -31,10 +31,14 @@
     [self.view setBackgroundColor:IRGlobalBg];
     [self.navigationItem setTitle:@"推送设置"];
     
+    NSNumber *blogSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"blogSendSwitch"]];
+    NSNumber *webSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"webSendSwitch"]];
+    NSNumber *openSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"openSendSwitch"]];
+    
     self.title_array = @[
-                             @{@"title":@"博客推送", @"type":@"Switch"},
-                             @{@"title":@"网站推送", @"type":@"Switch"},
-                             @{@"title":@"开源推送", @"type":@"Switch"}
+                         @{@"title":@"博客推送", @"type":@"Switch", @"subtype":blogSendSwitchNum},
+                         @{@"title":@"网站推送", @"type":@"Switch", @"subtype":webSendSwitchNum},
+                         @{@"title":@"开源推送", @"type":@"Switch", @"subtype":openSendSwitchNum}
                          ];
     
 }
@@ -66,10 +70,12 @@
 {
     NSDictionary *dictionary = self.title_array[indexPath.row];
     
-    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView];
+    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView indexPath:indexPath];
+    cell.delegate = self;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.cell_type = dictionary[@"type"];
+    cell.isOpen = [dictionary[@"subtype"] boolValue];
     [cell.textLabel setText:dictionary[@"title"]];
     
     return cell;
@@ -91,6 +97,20 @@
     return FLT_MIN;
 }
 
+- (void)settingTableViewCell:(JHSettingTableViewCell *)settingTableViewCell switchTypeChange:(UISwitch *)sender
+{
+    if (sender.tag == 0) {  // 微博推送
+        [UserDefaults setBool:sender.isOn forKey:@"blogSendSwitch"];
+        
+    }else if (sender.tag == 1){ // 网站推送
+        [UserDefaults setBool:sender.isOn forKey:@"webSendSwitch"];
+        
+    }else{  // 开源推送
+        [UserDefaults setBool:sender.isOn forKey:@"openSendSwitch"];
+        
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -15,7 +15,8 @@
 #import "JHAboutMeViewController.h"
 #import "IRClearCache.h"
 
-@interface IRSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface IRSettingViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate,JHSettingTableViewCellDelegate, IRClearCacheDelegate>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *title_array;
 
@@ -36,10 +37,12 @@
     [self.view setBackgroundColor:IRGlobalBg];
     
     NSNumber *imageDownloadSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"imageDownloadSwitch"]];
+   
+    // 显示缓存
     NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)objectAtIndex:0];
-    
-    float cacheSize = [self folderSizeAtPath:cachPath];
+    float cacheSize = [IRClearCache folderSizeAtPath:cachPath];
     NSString *cacheString = [NSString stringWithFormat:@"%0.1f MB", cacheSize];
+    
     self.title_array = @[
                          @[@{@"title":@"推送设置", @"type":@"Arrow", @"subtype":@""}],
                          @[
@@ -85,15 +88,17 @@
     NSArray *sub_title_array = self.title_array[indexPath.section];
     NSDictionary *dictionary = sub_title_array[indexPath.row];
     
-    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView];
+    JHSettingTableViewCell *cell = [JHSettingTableViewCell settingTableViewCellWithTableView:tableView indexPath:indexPath];
     [cell.textLabel setTextColor:IRTextFontColor666];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.cell_type = dictionary[@"type"];
+    [cell.textLabel setText:dictionary[@"title"]];
     
     if ([dictionary[@"type"] isEqualToString:@"Label"]) {
         cell.label_text = dictionary[@"subtype"];
+    }else if ([dictionary[@"type"] isEqualToString:@"Switch"]){
+        cell.isOpen = [dictionary[@"subtype"] boolValue];
     }
-    [cell.textLabel setText:dictionary[@"title"]];
     
     return cell;
 }
@@ -112,7 +117,8 @@
         
     }else if (indexPath.section == 1 && indexPath.row == 2){    //  清理缓存
         
-        [self clearInternalStorage];
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"清理" otherButtonTitles:nil, nil];
+        [actionSheet showInView:self.view];
         
     }else if (indexPath.section == 2 && indexPath.row == 0){    //  意见反馈
         
@@ -148,69 +154,27 @@
     return FLT_MIN;
 }
 
-#pragma mark - ------------------------------缓存清理相关-----------------------
-- (void)clearInternalStorage
+#pragma mark - ------------------------------其他代理方法-----------------------
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    dispatch_async(
-                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
-                   , ^{
-                       NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)objectAtIndex:0];
-                       NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachPath];
-                       NSLog(@"files :%lu",(unsigned long)[files count]);
-                       for (NSString *p in files) {
-                           NSError *error;
-                           NSString *path = [cachPath stringByAppendingPathComponent:p];
-                           if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-                               [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
-                           }
-                       }
-                       [self performSelectorOnMainThread:@selector(clearCacheSuccess)withObject:nil waitUntilDone:YES];});
+    if (buttonIndex == 0) {
+        // 清除缓存
+        IRClearCache *clearCache = [[IRClearCache alloc] init];
+        clearCache.delegate = self;
+        [clearCache clearCache];
+    }
 }
 
--(void)clearCacheSuccess
+- (void)settingTableViewCell:(JHSettingTableViewCell *)settingTableViewCell switchTypeChange:(UISwitch *)sender
+{
+    [UserDefaults setBool:sender.isOn forKey:@"imageDownloadSwitch"];
+}
+
+- (void)clearCache:(IRClearCache *)clearCache didClearCacheInfo:(NSString *)info
 {
     [self setupViewInfo];
     [self.tableView reloadData];
-    
-    
 }
-
-//遍历文件夹获得文件夹大小，返回多少M
-- (float ) folderSizeAtPath:(NSString*) folderPath{
-    
-    NSFileManager* manager = [NSFileManager defaultManager];
-    
-    if (![manager fileExistsAtPath:folderPath]) return 0;
-    
-    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
-    
-    NSString* fileName;
-    
-    long long folderSize = 0;
-    
-    while ((fileName = [childFilesEnumerator nextObject]) != nil){
-        
-        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
-        
-        folderSize += [self fileSizeAtPath:fileAbsolutePath];
-        
-    }
-    
-    return folderSize/(1024.0*1024.0);
-    
-}
-
-- (long long) fileSizeAtPath:(NSString*) filePath{
-    
-    NSFileManager* manager = [NSFileManager defaultManager];
-    
-    if ([manager fileExistsAtPath:filePath]){
-        
-        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
-    }
-    return 0;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

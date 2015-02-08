@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class IRClearCache;
+
+@protocol IRClearCacheDelegate <NSObject>
+
+@optional
+- (void)clearCache:(IRClearCache *)clearCache didClearCacheInfo:(NSString *)info;
+
+@end
+
 @interface IRClearCache : NSObject
+
+@property (nonatomic, weak) id <IRClearCacheDelegate>delegate;
+
 /**
  *  获取单个文件大小
  *
@@ -30,6 +42,6 @@
 /**
  *  清理缓存
  */
-+ (void)clearCache;
+- (void)clearCache;
 
 @end
