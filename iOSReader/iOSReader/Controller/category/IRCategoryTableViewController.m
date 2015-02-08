@@ -13,7 +13,7 @@
 #import <SWTableViewCell.h>
 #import "IRDataMannager.h"
 #import "IRDefineHeader.h"
-
+#import "SVProgressHUD.h"
 @interface IRCategoryTableViewController ()<SWTableViewCellDelegate
 ,UISearchResultsUpdating, UISearchBarDelegate,KINWebBrowserDelegate>
 
@@ -68,7 +68,7 @@
            strongify(self);
            self.categoryArray = categoryArray;
        } failure:^(NSString *errorStr) {
-           NSLog(@"%@",errorStr);
+           [SVProgressHUD showErrorWithStatus:errorStr];
        }];
     }
     
@@ -204,10 +204,10 @@
                 [cateCell hideUtilityButtonsAnimated:YES];
                 
                 [[IRDataMannager sharedManager] savaUserCategoryData:cateCell.category WithSuccess:^(NSString *successStr) {
-                    NSLog(@"%@",successStr);
+                    [SVProgressHUD showSuccessWithStatus:successStr];
                     self.addToMainBlock(cateCell.category);
                 } failure:^(NSString *errorStr) {
-                    NSLog(@"%@",errorStr);
+                    [SVProgressHUD showInfoWithStatus:errorStr];
                 }];
                 //添加到首页
                 

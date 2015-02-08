@@ -13,6 +13,7 @@
 #import "IRCategoryModel.h"
 #import "IRDefineHeader.h"
 #import "IRDataMannager.h"
+#import "SVProgressHUD.h"
 @interface IRMainViewController ()<UICollectionViewDataSource, UICollectionViewDelegate,KINWebBrowserDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 @property (nonatomic,strong) NSMutableArray *collectionArray;
@@ -42,7 +43,6 @@
     
     if (indexPath)
     {
-        NSLog(@"%@",indexPath);
         IRMainCollectionViewCell *cell = (IRMainCollectionViewCell *)[self.mainCollectionView cellForItemAtIndexPath:indexPath];
         
         [self addShakeAnimationForView:cell.itemImageView withDuration:0.5];
@@ -68,9 +68,9 @@
                 if (finished)
                {
                     [[IRDataMannager sharedManager] deleteUserCategoryData:category WithSuccess:^(NSString *successStr) {
-                        NSLog(@"%@",successStr);
+                        [SVProgressHUD showSuccessWithStatus:successStr];
                     } failure:^(NSString *errorStr) {
-                        NSLog(@"%@",errorStr);
+                        [SVProgressHUD showInfoWithStatus:errorStr];
                     }];
                }
             }];}]];
