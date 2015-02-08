@@ -12,6 +12,7 @@
 
 @interface JHFeedBackViewController ()
 @property (weak, nonatomic) IBOutlet JHPlaceHolderTextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *userInfoTextView;
 
 @end
 
@@ -34,6 +35,11 @@
     self.textView.placeholder = @"请填写您的建议...";
     self.textView.font = [UIFont systemFontOfSize:16];
     self.textView.layer.cornerRadius = 5;
+    
+    self.userInfoTextView.placeholder = @" 手机号或邮箱（选填）";
+    self.userInfoTextView.font = [UIFont systemFontOfSize:16];
+    self.userInfoTextView.layer.cornerRadius = 5;
+    
     
 }
 
