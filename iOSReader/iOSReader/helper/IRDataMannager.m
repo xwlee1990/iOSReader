@@ -35,12 +35,12 @@
     NSMutableArray *userWebArray = [[TMCache sharedCache] objectForKey:@"userWeb"];
     if (!userWebArray) {
         userWebArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userBlogArray forKey:@"userWeb"];
+        [[TMCache sharedCache] setObject:userWebArray forKey:@"userWeb"];
     }
     NSMutableArray *userGithubArray = [[TMCache sharedCache] objectForKey:@"userGithub"];
     if (!userGithubArray) {
         userGithubArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userBlogArray forKey:@"userGithub"];
+        [[TMCache sharedCache] setObject:userGithubArray forKey:@"userGithub"];
     }
     
      return [[NSMutableArray arrayWithObjects:userBlogArray,userWebArray,userGithubArray, nil] mutableCopy];
@@ -178,8 +178,8 @@
     NSMutableArray *tempArray = [cache objectForKey:key];
     
     [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        IRCategoryModel *cate = obj;
-        if ([cate.categoryIndex isEqualToString:category.categoryIndex]) {
+        IRCategoryModel *oldcCate = obj;
+        if ([oldcCate.categoryIndex isEqualToString:category.categoryIndex]) {
             contains = YES;
             *stop=YES;
             failure(@"已添加该对象");

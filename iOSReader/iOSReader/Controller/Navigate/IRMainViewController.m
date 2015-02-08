@@ -174,6 +174,8 @@
     IRMainCollectionViewCell *cell = (IRMainCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     IRCategoryModel * category = self.collectionArray[indexPath.section][indexPath.row];
     cell.category = category;
+    cell.itemTitle.text = category.categoryTitle;
+    cell.itemImageView.image = [IRDataMannager fetchCategoryAvatar:category];
     return cell;
 }
 

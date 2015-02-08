@@ -17,6 +17,7 @@
     [aCoder encodeObject:self.categoryIndex forKey:@"categoryIndex"];
     [aCoder encodeObject:self.categoryUrl   forKey:@"categoryUrl"];
     [aCoder encodeObject:self.categoryTitle forKey:@"categoryTitle"];
+    [aCoder encodeObject:@(self.categoryType) forKey:@"categoryType"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -27,6 +28,7 @@
       self.categoryIndex =  [aDecoder decodeObjectForKey:@"categoryIndex"];
       self.categoryTitle =  [aDecoder decodeObjectForKey:@"categoryTitle"];
       self.categoryUrl   =  [aDecoder decodeObjectForKey:@"categoryUrl"];
+      self.categoryType = [[aDecoder decodeObjectForKey:@"categoryType"] integerValue];
     }
     return self;
 }

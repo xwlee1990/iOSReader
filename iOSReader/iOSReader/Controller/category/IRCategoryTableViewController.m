@@ -198,12 +198,13 @@
     switch (index) {
         //添加操作
         case 0:
-           // if (self.addToMainBlock)
+            if (self.addToMainBlock)
         {
                 //关闭按钮
                 [cateCell hideUtilityButtonsAnimated:YES];
-                
+                weakify(self);
                 [[IRDataMannager sharedManager] savaUserCategoryData:cateCell.category WithSuccess:^(NSString *successStr) {
+                    strongify(self);
                     [SVProgressHUD showSuccessWithStatus:successStr];
                     self.addToMainBlock(cateCell.category);
                 } failure:^(NSString *errorStr) {

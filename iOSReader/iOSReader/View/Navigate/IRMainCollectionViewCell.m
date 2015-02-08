@@ -19,13 +19,6 @@
 }
 
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    self.itemTitle.text = self.category.categoryTitle;
-    self.itemImageView.image = [IRDataMannager fetchCategoryAvatar:self.category];
-
-}
 
 - (IBAction)deleteAction:(id)sender {
     
