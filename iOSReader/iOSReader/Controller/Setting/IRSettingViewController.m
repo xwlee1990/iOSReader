@@ -32,6 +32,14 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setupViewInfo];
+    [self.tableView reloadData];
+    
+}
+
 - (void)setupViewInfo
 {
     [self.view setBackgroundColor:IRGlobalBg];
@@ -44,16 +52,16 @@
     NSString *cacheString = [NSString stringWithFormat:@"%0.1f MB", cacheSize];
     
     self.title_array = @[
-                         @[@{@"title":@"推送设置", @"type":@"Arrow", @"subtype":@""}],
+                         @[@{@"title":@"推送设置", @"type":@"Arrow", @"subtype":@"", @"done":@"SendSetting"}],
                          @[
-                             @{@"title":@"离线设置", @"type":@"Arrow", @"subtype":@"0"},
-                             @{@"title":@"仅Wi-Fi网络下载图片", @"type":@"Switch", @"subtype":imageDownloadSwitchNum},
-                             @{@"title":@"清理缓存", @"type":@"Label", @"subtype":cacheString}
+                             @{@"title":@"离线设置", @"type":@"Arrow", @"subtype":@"0", @"done":@"OffLineSetting"},
+                             @{@"title":@"仅Wi-Fi网络下载图片", @"type":@"Switch", @"subtype":imageDownloadSwitchNum, @"done":@"DownloadSetting"},
+                             @{@"title":@"清理缓存", @"type":@"Label", @"subtype":cacheString, @"done":@"ClearCache"}
                              ],
                          @[
-                             @{@"title":@"意见反馈", @"type":@"Arrow", @"subtype":@"0"},
-                             @{@"title":@"为iOSReader评分", @"type":@"Arrow", @"subtype":@"0"},
-                             @{@"title":@"关于", @"type":@"Arrow", @"subtype":@"0"}
+                             @{@"title":@"意见反馈", @"type":@"Arrow", @"subtype":@"0", @"done":@"Feedback"},
+                             @{@"title":@"为iOSReader评分", @"type":@"Arrow", @"subtype":@"0", @"done":@"StarSetting"},
+                             @{@"title":@"关于", @"type":@"Arrow", @"subtype":@"0", @"done":@"AboutMine"}
                              ]
                          ];
 }
@@ -105,38 +113,50 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0 && indexPath.row == 0) {     //  推送设置
+    
+    NSArray *sub_title_array = self.title_array[indexPath.section];
+    NSDictionary *dictionary = sub_title_array[indexPath.row];
+    NSString *done = dictionary[@"done"];
+    
+    if ([done isEqualToString:@"SendSetting"]) {//  推送设置
         
         JHSendSettingViewController *sendSettingViewController = [[JHSendSettingViewController alloc] init];
         [self.navigationController pushViewController:sendSettingViewController animated:YES];
         
-    }else if (indexPath.section == 1 && indexPath.row == 0){    //  离线阅读设置
+    }else if ([done isEqualToString:@"OffLineSetting"]){//  离线阅读设置
         
         JHOfflineBrowsingSettingViewController *offlineBrowsingSettingViewController = [[JHOfflineBrowsingSettingViewController alloc] init];
         [self.navigationController pushViewController:offlineBrowsingSettingViewController animated:YES];
         
-    }else if (indexPath.section == 1 && indexPath.row == 2){    //  清理缓存
+    }else if ([done isEqualToString:@"DownloadSetting"]){//  清理缓存
         
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"清理" otherButtonTitles:nil, nil];
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self
+                                                        cancelButtonTitle:@"取消"
+                                                   destructiveButtonTitle:@"清理"
+                                                        otherButtonTitles:nil, nil];
         [actionSheet showInView:self.view];
         
-    }else if (indexPath.section == 2 && indexPath.row == 0){    //  意见反馈
+    }else if ([done isEqualToString:@"ClearCache"]){//  意见反馈
         
         JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
         [self.navigationController pushViewController:feedBackViewController animated:YES];
         
-    }else if (indexPath.section == 2 && indexPath.row == 1){    //  为iOSReader评分
+    }else if ([done isEqualToString:@"Feedback"]){ //  意见反馈
         
-    }else if (indexPath.section == 2 && indexPath.row == 2){    //  关于我们
+        JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
+        [self.navigationController pushViewController:feedBackViewController animated:YES];
+        
+    }else if ([done isEqualToString:@"StarSetting"]){   // 评分
+        
+//        NSString *str = [NSString stringWithFormat: @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", @"954270"];
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        
+    }else if ([done isEqualToString:@"AboutMine"]){//  关于我们
         
         JHAboutMeViewController *aboutMeViewController = [[JHAboutMeViewController alloc] init];
         [self.navigationController pushViewController:aboutMeViewController animated:YES];
         
-    }else{
-        
     }
-    
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
