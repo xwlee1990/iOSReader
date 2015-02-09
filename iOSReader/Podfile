@@ -4,5 +4,6 @@ pod 'TMCache', '~> 1.2.3'
 pod 'AVOSCloud', '~> 2.6.10'
 #左右滑动cell
 pod 'SWTableViewCell', '~> 0.3.7'
-#提示框
-pod 'JGProgressHUD', '~> 1.2.3'
+#评分插件
+pod 'SARate', '~> 1.0.1’
+
