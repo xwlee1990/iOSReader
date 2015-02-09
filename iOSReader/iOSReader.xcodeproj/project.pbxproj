@@ -16,6 +16,12 @@
 		048939A11A8682C400727F26 /* JHSendSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489399B1A8682C400727F26 /* JHSendSettingViewController.m */; };
 		048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939A31A86830800727F26 /* JHSettingTableViewCell.m */; };
 		048939A71A86849A00727F26 /* IRClearCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 048939A61A86849A00727F26 /* IRClearCache.m */; };
+		353DA0BF1A887ED200354FFF /* web8.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0BE1A887ED200354FFF /* web8.png */; };
+		353DA0C11A887F2A00354FFF /* web6.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C01A887F2A00354FFF /* web6.png */; };
+		353DA0C31A887F5700354FFF /* web7.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C21A887F5700354FFF /* web7.png */; };
+		353DA0C51A88803700354FFF /* web9.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C41A88803700354FFF /* web9.png */; };
+		353DA0C71A8880DC00354FFF /* web10.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C61A8880DC00354FFF /* web10.png */; };
+		353DA0C91A88821100354FFF /* AvatarDeafault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C81A88821100354FFF /* AvatarDeafault@2x.png */; };
 		8609B53C9FE9C0AC4666327E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C32B3FE4B43B4CE56864354 /* libPods.a */; };
 		D90C19CD1A83BE330060C523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CC1A83BE330060C523 /* main.m */; };
 		D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CF1A83BE330060C523 /* AppDelegate.m */; };
@@ -103,11 +109,6 @@
 		D90C1AE51A83C6100060C523 /* IRHome_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AA61A83C6100060C523 /* IRHome_blue@2x.png */; };
 		D90C1AE61A83C6100060C523 /* IRSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AA71A83C6100060C523 /* IRSetting@2x.png */; };
 		D90C1AE71A83C6100060C523 /* IRSetting_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AA81A83C6100060C523 /* IRSetting_blue@2x.png */; };
-		D90C1AE81A83C6100060C523 /* UITabBarAppBrowse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AA91A83C6100060C523 /* UITabBarAppBrowse@2x.png */; };
-		D90C1AE91A83C6100060C523 /* UITabBarFeatured@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAA1A83C6100060C523 /* UITabBarFeatured@2x.png */; };
-		D90C1AEA1A83C6100060C523 /* UITabBarFeaturedSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAB1A83C6100060C523 /* UITabBarFeaturedSelected@2x.png */; };
-		D90C1AEB1A83C6100060C523 /* UITabBarSettingSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAC1A83C6100060C523 /* UITabBarSettingSelected@2x.png */; };
-		D90C1AEC1A83C6100060C523 /* UITarBarSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AAD1A83C6100060C523 /* UITarBarSetting@2x.png */; };
 		D90C1AEE1A83C83B0060C523 /* LaunchScreenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AED1A83C83B0060C523 /* LaunchScreenImage.png */; };
 		D90C1AF41A86851E0060C523 /* web0.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AEF1A86851E0060C523 /* web0.png */; };
 		D90C1AF51A86851E0060C523 /* web1.png in Resources */ = {isa = PBXBuildFile; fileRef = D90C1AF01A86851E0060C523 /* web1.png */; };
@@ -150,6 +151,12 @@
 		048939A51A86849A00727F26 /* IRClearCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRClearCache.h; sourceTree = "<group>"; };
 		048939A61A86849A00727F26 /* IRClearCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRClearCache.m; sourceTree = "<group>"; };
 		2C32B3FE4B43B4CE56864354 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		353DA0BE1A887ED200354FFF /* web8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web8.png; sourceTree = "<group>"; };
+		353DA0C01A887F2A00354FFF /* web6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web6.png; sourceTree = "<group>"; };
+		353DA0C21A887F5700354FFF /* web7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web7.png; sourceTree = "<group>"; };
+		353DA0C41A88803700354FFF /* web9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web9.png; sourceTree = "<group>"; };
+		353DA0C61A8880DC00354FFF /* web10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web10.png; sourceTree = "<group>"; };
+		353DA0C81A88821100354FFF /* AvatarDeafault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AvatarDeafault@2x.png"; sourceTree = "<group>"; };
 		4D6974993BCDA6B6CB118CB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D90C19C71A83BE330060C523 /* iOSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90C19CB1A83BE330060C523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,11 +267,6 @@
 		D90C1AA61A83C6100060C523 /* IRHome_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IRHome_blue@2x.png"; sourceTree = "<group>"; };
 		D90C1AA71A83C6100060C523 /* IRSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IRSetting@2x.png"; sourceTree = "<group>"; };
 		D90C1AA81A83C6100060C523 /* IRSetting_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IRSetting_blue@2x.png"; sourceTree = "<group>"; };
-		D90C1AA91A83C6100060C523 /* UITabBarAppBrowse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITabBarAppBrowse@2x.png"; sourceTree = "<group>"; };
-		D90C1AAA1A83C6100060C523 /* UITabBarFeatured@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITabBarFeatured@2x.png"; sourceTree = "<group>"; };
-		D90C1AAB1A83C6100060C523 /* UITabBarFeaturedSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITabBarFeaturedSelected@2x.png"; sourceTree = "<group>"; };
-		D90C1AAC1A83C6100060C523 /* UITabBarSettingSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITabBarSettingSelected@2x.png"; sourceTree = "<group>"; };
-		D90C1AAD1A83C6100060C523 /* UITarBarSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITarBarSetting@2x.png"; sourceTree = "<group>"; };
 		D90C1AED1A83C83B0060C523 /* LaunchScreenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenImage.png; sourceTree = "<group>"; };
 		D90C1AEF1A86851E0060C523 /* web0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web0.png; sourceTree = "<group>"; };
 		D90C1AF01A86851E0060C523 /* web1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web1.png; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 				D90C1A731A83C6100060C523 /* forwardbutton@3x.png */,
 				D90C1A741A83C6100060C523 /* icon */,
 				D90C1A9B1A83C6100060C523 /* launchImageview.png */,
+				353DA0C81A88821100354FFF /* AvatarDeafault@2x.png */,
 				D90C1A9C1A83C6100060C523 /* panda.jpg */,
 				D90C1A9D1A83C6100060C523 /* safari.png */,
 				D90C1A9E1A83C6100060C523 /* safari@2x.png */,
@@ -613,11 +616,6 @@
 				D90C1AA01A83C6100060C523 /* safari~iPad.png */,
 				D90C1AA11A83C6100060C523 /* safari~iPad@2x.png */,
 				D90C1AA21A83C6100060C523 /* tabbarImage */,
-				D90C1AA91A83C6100060C523 /* UITabBarAppBrowse@2x.png */,
-				D90C1AAA1A83C6100060C523 /* UITabBarFeatured@2x.png */,
-				D90C1AAB1A83C6100060C523 /* UITabBarFeaturedSelected@2x.png */,
-				D90C1AAC1A83C6100060C523 /* UITabBarSettingSelected@2x.png */,
-				D90C1AAD1A83C6100060C523 /* UITarBarSetting@2x.png */,
 			);
 			path = ImageSource;
 			sourceTree = "<group>";
@@ -629,7 +627,12 @@
 				D90C1AF01A86851E0060C523 /* web1.png */,
 				D90C1AF11A86851E0060C523 /* web2.png */,
 				D90C1AF21A86851E0060C523 /* web3.png */,
+				353DA0C41A88803700354FFF /* web9.png */,
+				353DA0C01A887F2A00354FFF /* web6.png */,
+				353DA0C21A887F5700354FFF /* web7.png */,
 				D90C1AF31A86851E0060C523 /* web4.png */,
+				353DA0BE1A887ED200354FFF /* web8.png */,
+				353DA0C61A8880DC00354FFF /* web10.png */,
 				D90C1A751A83C6100060C523 /* blog0.jpg */,
 				D90C1A761A83C6100060C523 /* blog1.jpg */,
 				D90C1A771A83C6100060C523 /* blog10.jpg */,
@@ -780,16 +783,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90C1AC11A83C6100060C523 /* blog22.jpg in Resources */,
+				353DA0C51A88803700354FFF /* web9.png in Resources */,
 				D90C1AC61A83C6100060C523 /* blog29.jpg in Resources */,
 				D90C1AD71A83C6100060C523 /* blog7.jpg in Resources */,
 				D90C1AD61A83C6100060C523 /* blog6.jpg in Resources */,
 				D90C1AD91A83C6100060C523 /* blog9.jpg in Resources */,
 				D90C1ACF1A83C6100060C523 /* blog39.jpg in Resources */,
-				D90C1AEA1A83C6100060C523 /* UITabBarFeaturedSelected@2x.png in Resources */,
 				D90C1AD31A83C6100060C523 /* blog43.jpg in Resources */,
+				353DA0C31A887F5700354FFF /* web7.png in Resources */,
 				D90C1ACE1A83C6100060C523 /* blog38.jpg in Resources */,
 				D90C1AD01A83C6100060C523 /* blog4.jpg in Resources */,
-				D90C1AE91A83C6100060C523 /* UITabBarFeatured@2x.png in Resources */,
 				D90C1ABF1A83C6100060C523 /* blog20.jpg in Resources */,
 				D90C1ADF1A83C6100060C523 /* safari@3x.png in Resources */,
 				D90C1ADD1A83C6100060C523 /* safari.png in Resources */,
@@ -800,11 +803,13 @@
 				0489399D1A8682C400727F26 /* JHAboutMeViewController.xib in Resources */,
 				D90C1AD41A83C6100060C523 /* blog44.jpg in Resources */,
 				D90C1AE31A83C6100060C523 /* IRCollet_blue@2x.png in Resources */,
+				353DA0BF1A887ED200354FFF /* web8.png in Resources */,
 				D90C1AE21A83C6100060C523 /* IRCollet@2x.png in Resources */,
 				D90C1AB61A83C6100060C523 /* blog1.jpg in Resources */,
 				D90C1ACC1A83C6100060C523 /* blog36.jpg in Resources */,
 				D90C1AEE1A83C83B0060C523 /* LaunchScreenImage.png in Resources */,
 				D90C1AC51A83C6100060C523 /* blog28.jpg in Resources */,
+				353DA0C91A88821100354FFF /* AvatarDeafault@2x.png in Resources */,
 				D90C1ABB1A83C6100060C523 /* blog16.jpg in Resources */,
 				D90C1AD51A83C6100060C523 /* blog5.jpg in Resources */,
 				D90C1AB31A83C6100060C523 /* forwardbutton@2x.png in Resources */,
@@ -819,6 +824,7 @@
 				D90C1AF61A86851E0060C523 /* web2.png in Resources */,
 				D90C1AC01A83C6100060C523 /* blog21.jpg in Resources */,
 				D90C1A5B1A83BEDD0060C523 /* articleModel.plist in Resources */,
+				353DA0C71A8880DC00354FFF /* web10.png in Resources */,
 				D90C19DB1A83BE330060C523 /* LaunchScreen.xib in Resources */,
 				D90C1AC41A83C6100060C523 /* blog27.jpg in Resources */,
 				D90C1AE61A83C6100060C523 /* IRSetting@2x.png in Resources */,
@@ -834,7 +840,6 @@
 				D90C1AD21A83C6100060C523 /* blog42.jpg in Resources */,
 				D90C1AD11A83C6100060C523 /* blog40.jpg in Resources */,
 				D90C1A5C1A83BEDD0060C523 /* CategoryBlogModel.plist in Resources */,
-				D90C1AEB1A83C6100060C523 /* UITabBarSettingSelected@2x.png in Resources */,
 				D90C1AC31A83C6100060C523 /* blog24.jpg in Resources */,
 				D90C1AF51A86851E0060C523 /* web1.png in Resources */,
 				D90C1ADB1A83C6100060C523 /* launchImageview.png in Resources */,
@@ -848,12 +853,11 @@
 				D90C1AE41A83C6100060C523 /* IRHome@2x.png in Resources */,
 				D93A66BF1A87AB5600AE199C /* IRArticleCell.xib in Resources */,
 				D90C19D81A83BE330060C523 /* Images.xcassets in Resources */,
-				D90C1AE81A83C6100060C523 /* UITabBarAppBrowse@2x.png in Resources */,
 				D90C1AF41A86851E0060C523 /* web0.png in Resources */,
 				D90C1AFC1A8693CE0060C523 /* deleteIcon@2x.png in Resources */,
-				D90C1AEC1A83C6100060C523 /* UITarBarSetting@2x.png in Resources */,
 				D90C1AF81A86851E0060C523 /* web4.png in Resources */,
 				D90C1ABA1A83C6100060C523 /* blog14.jpg in Resources */,
+				353DA0C11A887F2A00354FFF /* web6.png in Resources */,
 				D90C1AB71A83C6100060C523 /* blog10.jpg in Resources */,
 				D90C1B051A87442E0060C523 /* SVProgressHUD.bundle in Resources */,
 				D90C1AF71A86851E0060C523 /* web3.png in Resources */,

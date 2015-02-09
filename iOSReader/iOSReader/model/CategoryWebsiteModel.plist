@@ -46,7 +46,7 @@
 		<key>categoryIndex</key>
 		<string>web4</string>
 		<key>categoryUrl</key>
-		<string>http://www.cocoachina.com/ios/</string>
+		<string>http://www.cocoachina.com/cms/wap.php</string>
 		<key>categoryTitle</key>
 		<string>cocoachina</string>
 		<key>categoryType</key>
@@ -54,7 +54,7 @@
 	</dict>
 	<dict>
 		<key>categoryIndex</key>
-		<string>web5</string>
+		<string>web4</string>
 		<key>categoryUrl</key>
 		<string>http://www.cocoachina.com/cms/plus/search.php?keyword=%E6%BA%90%E7%A0%81%E6%8E%A8%E8%8D%90&amp;searchtype=titlekeyword&amp;channeltype=0&amp;orderby=&amp;kwtype=0&amp;pagesize=10&amp;typeid=0&amp;TotalResult=161&amp;PageNo=1</string>
 		<key>categoryTitle</key>

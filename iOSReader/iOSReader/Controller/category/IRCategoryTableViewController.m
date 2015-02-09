@@ -51,7 +51,8 @@
     
     self.definesPresentationContext = YES;
     self.tableView.tableFooterView = [[UIView alloc] init];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+   // self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 

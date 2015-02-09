@@ -307,6 +307,6 @@
         avatarImage=[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:category.categoryIndex ofType:@"png"]];
     
     }
-    return avatarImage==nil?[UIImage imageNamed:@"IRdefaultAvatar"]:avatarImage;
+    return avatarImage==nil?[UIImage imageNamed:@"AvatarDeafault"]:avatarImage;
 }
 @end
