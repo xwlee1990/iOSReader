@@ -8,6 +8,10 @@
 
 #import "IRDataMannager.h"
 #import <TMCache.h>
+static NSString * const kuserBlog = @"userBlog";
+static NSString * const kuserWeb  = @"userWeb";
+static NSString * const kuserGithub = @"userGithub";
+static NSString * const kuserFavourite = @"userFavourite";
 @implementation IRDataMannager
 
 
@@ -27,20 +31,20 @@
  */
 + (NSMutableArray *)initUserData
 {
-    NSMutableArray *userBlogArray = [[TMCache sharedCache] objectForKey:@"userBlog"];
+    NSMutableArray *userBlogArray = [[TMCache sharedCache] objectForKey:kuserBlog];
     if (!userBlogArray) {
         userBlogArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userBlogArray forKey:@"userBlog"];
+        [[TMCache sharedCache] setObject:userBlogArray forKey:kuserBlog];
     }
-    NSMutableArray *userWebArray = [[TMCache sharedCache] objectForKey:@"userWeb"];
+    NSMutableArray *userWebArray = [[TMCache sharedCache] objectForKey:kuserWeb];
     if (!userWebArray) {
         userWebArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userWebArray forKey:@"userWeb"];
+        [[TMCache sharedCache] setObject:userWebArray forKey:kuserWeb];
     }
-    NSMutableArray *userGithubArray = [[TMCache sharedCache] objectForKey:@"userGithub"];
+    NSMutableArray *userGithubArray = [[TMCache sharedCache] objectForKey:kuserGithub];
     if (!userGithubArray) {
         userGithubArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userGithubArray forKey:@"userGithub"];
+        [[TMCache sharedCache] setObject:userGithubArray forKey:kuserGithub];
     }
     
      return [[NSMutableArray arrayWithObjects:userBlogArray,userWebArray,userGithubArray, nil] mutableCopy];
@@ -52,10 +56,10 @@
  */
 + (NSMutableArray *)initUserFavouriteData
 {
-    NSMutableArray *userBlogArray = [[TMCache sharedCache] objectForKey:@"userFavourite"];
+    NSMutableArray *userBlogArray = [[TMCache sharedCache] objectForKey:kuserFavourite];
     if (!userBlogArray) {
         userBlogArray = [NSMutableArray array];
-        [[TMCache sharedCache] setObject:userBlogArray forKey:@"userFavourite"];
+        [[TMCache sharedCache] setObject:userBlogArray forKey:kuserFavourite];
     }
     return [userBlogArray mutableCopy];
 }
@@ -77,11 +81,10 @@
         IRArticleModel *article = [IRArticleModel new];
         article.articleTitle = title;
         article.articleUrl = url;
-        NSString *key = @"userFavourite";
         TMCache *cache = [TMCache sharedCache];
-        NSMutableArray *tempArray = [cache objectForKey:key];
+        NSMutableArray *tempArray = [cache objectForKey:kuserFavourite];
         [tempArray addObject:article];
-        [cache setObject:tempArray forKey:key];
+        [cache setObject:tempArray forKey:kuserFavourite];
         //待完善,做些比较等
         success(@"收藏成功",article);
     }
@@ -97,11 +100,10 @@
  */
 - (void)saveUserFavouriteData:(IRArticleModel *)article  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
 {
-    NSString *key = @"userFavourite";
     TMCache *cache = [TMCache sharedCache];
-    NSMutableArray *tempArray = [cache objectForKey:key];
+    NSMutableArray *tempArray = [cache objectForKey:kuserFavourite];
     [tempArray addObject:article];
-    [cache setObject:tempArray forKey:key];
+    [cache setObject:tempArray forKey:kuserFavourite];
     //待完善,做些比较等
     success(@"收藏成功");
 }
@@ -209,13 +211,13 @@
     NSString *key=nil;
     switch (type) {
         case IRCategoryTypeBlog:
-            key = @"userBlog";
+            key = kuserBlog;
             break;
         case IRCategoryTypeWeb:
-            key = @"userWeb";
+            key = kuserWeb;
             break;
         case IRCategoryTypeGitHub:
-            key = @"userGithub";
+            key = kuserGithub;
             break;
         default:
             break;
@@ -253,7 +255,28 @@
     }
 }
 
-
+/**
+ *  删除单个用户收藏的文章
+ *
+ *  @param category      待删除文章模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)deleteUserFavouriteArticle:(IRArticleModel *)article  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure
+{
+   __block NSMutableArray *tempArray = [[TMCache sharedCache] objectForKey:kuserFavourite];
+    
+    [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        IRArticleModel *Oldarticle = obj;
+        if ([Oldarticle.articleUrl compare:article.articleUrl options:NSBackwardsSearch]==NSOrderedSame) {
+            *stop= YES;
+            [tempArray removeObject:obj];
+        }
+    }];
+    [[TMCache sharedCache] setObject:tempArray forKey:kuserFavourite];
+    success(@"删除成功");
+}
 /**
  *  删除单个用户分类数据
  *

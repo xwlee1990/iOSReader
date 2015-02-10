@@ -100,7 +100,8 @@
 {
     if(!_collectionArray)
     {
-        self.collectionArray = [IRDataMannager initUserData];
+        _collectionArray = [NSMutableArray array];
+        _collectionArray = [IRDataMannager initUserData];
     }
 
     return _collectionArray;

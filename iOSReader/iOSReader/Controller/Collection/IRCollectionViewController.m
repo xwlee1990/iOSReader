@@ -34,6 +34,7 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"IRAddFavouriteNoti" object:nil];
 }
+
 - (void)setupSearchController
 {
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.favouriteArray count]];
@@ -52,7 +53,6 @@
     self.definesPresentationContext = YES;
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"IRArticleCell" bundle:nil]
          forCellReuseIdentifier:@"ArticleCell"];
 }
@@ -146,6 +146,52 @@
     }
     
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    //删除
+    weakify(self);
+    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+    {
+        strongify(self);
+        IRArticleModel *article = [self.favouriteArray objectAtIndex:indexPath.row];
+        [self.favouriteArray removeObjectAtIndex:indexPath.row];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationLeft];
+        
+        [[IRDataMannager sharedManager] deleteUserFavouriteArticle:article WithSuccess:^(NSString *successStr) {
+            [SVProgressHUD showSuccessWithStatus:successStr];
+        } failure:^(NSString *errorStr) {
+            
+        }];
+        
+    }];
+    
+    //分享
+    UITableViewRowAction *moreRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"分享" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+    {
+        NSLog(@"分享");
+    }];
+    
+    moreRowAction.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    
+    return @[deleteRowAction,moreRowAction];
+}
+
+
+
 
 #pragma mark - UISearchResultsUpdating
 

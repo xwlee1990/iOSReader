@@ -22,14 +22,6 @@
 		353DA0C51A88803700354FFF /* web9.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C41A88803700354FFF /* web9.png */; };
 		353DA0C71A8880DC00354FFF /* web10.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C61A8880DC00354FFF /* web10.png */; };
 		353DA0C91A88821100354FFF /* AvatarDeafault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353DA0C81A88821100354FFF /* AvatarDeafault@2x.png */; };
-		35E07BBD1A89DB810021CDE3 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35E07BB21A89DB810021CDE3 /* iRate.bundle */; };
-		35E07BBE1A89DB810021CDE3 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BB41A89DB810021CDE3 /* iRate.m */; };
-		35E07BBF1A89DB810021CDE3 /* SARate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BB61A89DB810021CDE3 /* SARate.m */; };
-		35E07BC01A89DB810021CDE3 /* SARateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BB81A89DB810021CDE3 /* SARateViewController.m */; };
-		35E07BC11A89DB810021CDE3 /* star-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E07BB91A89DB810021CDE3 /* star-gray.png */; };
-		35E07BC21A89DB810021CDE3 /* star-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E07BBA1A89DB810021CDE3 /* star-gray@2x.png */; };
-		35E07BC31A89DB810021CDE3 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E07BBB1A89DB810021CDE3 /* star.png */; };
-		35E07BC41A89DB810021CDE3 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E07BBC1A89DB810021CDE3 /* star@2x.png */; };
 		35E07BC61A89DB9E0021CDE3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E07BC51A89DB9E0021CDE3 /* MessageUI.framework */; };
 		35E07BCD1A89DC960021CDE3 /* IRAVOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BC81A89DC960021CDE3 /* IRAVOSHelper.m */; };
 		35E07BCE1A89DC960021CDE3 /* IRDataMannager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BCA1A89DC960021CDE3 /* IRDataMannager.m */; };
@@ -168,17 +160,6 @@
 		353DA0C41A88803700354FFF /* web9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web9.png; sourceTree = "<group>"; };
 		353DA0C61A8880DC00354FFF /* web10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web10.png; sourceTree = "<group>"; };
 		353DA0C81A88821100354FFF /* AvatarDeafault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AvatarDeafault@2x.png"; sourceTree = "<group>"; };
-		35E07BB21A89DB810021CDE3 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		35E07BB31A89DB810021CDE3 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		35E07BB41A89DB810021CDE3 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		35E07BB51A89DB810021CDE3 /* SARate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARate.h; sourceTree = "<group>"; };
-		35E07BB61A89DB810021CDE3 /* SARate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARate.m; sourceTree = "<group>"; };
-		35E07BB71A89DB810021CDE3 /* SARateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARateViewController.h; sourceTree = "<group>"; };
-		35E07BB81A89DB810021CDE3 /* SARateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARateViewController.m; sourceTree = "<group>"; };
-		35E07BB91A89DB810021CDE3 /* star-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray.png"; sourceTree = "<group>"; };
-		35E07BBA1A89DB810021CDE3 /* star-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray@2x.png"; sourceTree = "<group>"; };
-		35E07BBB1A89DB810021CDE3 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		35E07BBC1A89DB810021CDE3 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		35E07BC51A89DB9E0021CDE3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		35E07BC71A89DC960021CDE3 /* IRAVOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRAVOSHelper.h; sourceTree = "<group>"; };
 		35E07BC81A89DC960021CDE3 /* IRAVOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRAVOSHelper.m; sourceTree = "<group>"; };
@@ -353,32 +334,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		35E07BB01A89DB810021CDE3 /* SARate */ = {
-			isa = PBXGroup;
-			children = (
-				35E07BB11A89DB810021CDE3 /* iRate */,
-				35E07BB51A89DB810021CDE3 /* SARate.h */,
-				35E07BB61A89DB810021CDE3 /* SARate.m */,
-				35E07BB71A89DB810021CDE3 /* SARateViewController.h */,
-				35E07BB81A89DB810021CDE3 /* SARateViewController.m */,
-				35E07BB91A89DB810021CDE3 /* star-gray.png */,
-				35E07BBA1A89DB810021CDE3 /* star-gray@2x.png */,
-				35E07BBB1A89DB810021CDE3 /* star.png */,
-				35E07BBC1A89DB810021CDE3 /* star@2x.png */,
-			);
-			path = SARate;
-			sourceTree = "<group>";
-		};
-		35E07BB11A89DB810021CDE3 /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				35E07BB21A89DB810021CDE3 /* iRate.bundle */,
-				35E07BB31A89DB810021CDE3 /* iRate.h */,
-				35E07BB41A89DB810021CDE3 /* iRate.m */,
-			);
-			path = iRate;
-			sourceTree = "<group>";
-		};
 		35E07BD01A8A04090021CDE3 /* UUID */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,7 +501,6 @@
 			isa = PBXGroup;
 			children = (
 				35E07BD01A8A04090021CDE3 /* UUID */,
-				35E07BB01A89DB810021CDE3 /* SARate */,
 				D90C1AFD1A87442E0060C523 /* SVProgressHUD */,
 				D90C1A091A83BEDD0060C523 /* KINWebBrowser */,
 				D90C1A221A83BEDD0060C523 /* TUSafariActivity */,
@@ -871,7 +825,6 @@
 				D90C1AB61A83C6100060C523 /* blog1.jpg in Resources */,
 				D90C1ACC1A83C6100060C523 /* blog36.jpg in Resources */,
 				D90C1AEE1A83C83B0060C523 /* LaunchScreenImage.png in Resources */,
-				35E07BC31A89DB810021CDE3 /* star.png in Resources */,
 				D90C1AC51A83C6100060C523 /* blog28.jpg in Resources */,
 				353DA0C91A88821100354FFF /* AvatarDeafault@2x.png in Resources */,
 				D90C1ABB1A83C6100060C523 /* blog16.jpg in Resources */,
@@ -882,10 +835,8 @@
 				D90C1ABD1A83C6100060C523 /* blog19.jpg in Resources */,
 				D90C1AC71A83C6100060C523 /* blog3.jpg in Resources */,
 				D90C1ABC1A83C6100060C523 /* blog18.jpg in Resources */,
-				35E07BC11A89DB810021CDE3 /* star-gray.png in Resources */,
 				0489399F1A8682C400727F26 /* JHFeedBackViewController.xib in Resources */,
 				D90C1ACB1A83C6100060C523 /* blog34.jpg in Resources */,
-				35E07BC41A89DB810021CDE3 /* star@2x.png in Resources */,
 				D90C1ADE1A83C6100060C523 /* safari@2x.png in Resources */,
 				D90C1AF61A86851E0060C523 /* web2.png in Resources */,
 				D90C1AC01A83C6100060C523 /* blog21.jpg in Resources */,
@@ -893,7 +844,6 @@
 				D90C19DB1A83BE330060C523 /* LaunchScreen.xib in Resources */,
 				D90C1AC41A83C6100060C523 /* blog27.jpg in Resources */,
 				D90C1AE61A83C6100060C523 /* IRSetting@2x.png in Resources */,
-				35E07BBD1A89DB810021CDE3 /* iRate.bundle in Resources */,
 				D90C1AE01A83C6100060C523 /* safari~iPad.png in Resources */,
 				D90C1AB41A83C6100060C523 /* forwardbutton@3x.png in Resources */,
 				D90C1AB91A83C6100060C523 /* blog13.jpg in Resources */,
@@ -918,7 +868,6 @@
 				D90C1AB01A83C6100060C523 /* backbutton@3x.png in Resources */,
 				D90C1AE41A83C6100060C523 /* IRHome@2x.png in Resources */,
 				D93A66BF1A87AB5600AE199C /* IRArticleCell.xib in Resources */,
-				35E07BC21A89DB810021CDE3 /* star-gray@2x.png in Resources */,
 				D90C19D81A83BE330060C523 /* Images.xcassets in Resources */,
 				D90C1AF41A86851E0060C523 /* web0.png in Resources */,
 				D90C1AFC1A8693CE0060C523 /* deleteIcon@2x.png in Resources */,
@@ -987,7 +936,6 @@
 				0489399E1A8682C400727F26 /* JHFeedBackViewController.m in Sources */,
 				35E07BD91A8A090C0021CDE3 /* IRUser.m in Sources */,
 				D90C1A601A83BEDD0060C523 /* UIColor+JH.m in Sources */,
-				35E07BBF1A89DB810021CDE3 /* SARate.m in Sources */,
 				D90C1A481A83BEDD0060C523 /* IRMainViewController.m in Sources */,
 				35E07BCF1A89DC960021CDE3 /* UIView+Positioning.m in Sources */,
 				D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */,
@@ -999,14 +947,12 @@
 				35E07BCD1A89DC960021CDE3 /* IRAVOSHelper.m in Sources */,
 				D90C1A5A1A83BEDD0060C523 /* IRArticleModel.m in Sources */,
 				048939911A8681E800727F26 /* JHPlaceHolderTextView.m in Sources */,
-				35E07BC01A89DB810021CDE3 /* SARateViewController.m in Sources */,
 				D90C1A461A83BEDD0060C523 /* IRCollectionViewController.m in Sources */,
 				D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */,
 				D90C1A4A1A83BEDD0060C523 /* IRSettingViewController.m in Sources */,
 				D90C1B061A87442E0060C523 /* SVProgressHUD.m in Sources */,
 				D90C1A451A83BEDD0060C523 /* IRCategoryTableViewController.m in Sources */,
 				D90C1A641A83BEDD0060C523 /* IRMainCollectionViewCell.m in Sources */,
-				35E07BBE1A89DB810021CDE3 /* iRate.m in Sources */,
 				D90C1A471A83BEDD0060C523 /* IRSuperSearchTabelViewController.m in Sources */,
 				D90C1B041A87442E0060C523 /* SVIndefiniteAnimatedView.m in Sources */,
 				D90C19CD1A83BE330060C523 /* main.m in Sources */,

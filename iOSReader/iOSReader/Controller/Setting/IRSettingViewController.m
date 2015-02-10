@@ -14,7 +14,6 @@
 #import "JHFeedBackViewController.h"
 #import "JHAboutMeViewController.h"
 #import "IRClearCache.h"
-#import "SARate.h"
 #import "SVProgressHUD.h"
 /**
  *  定义设置类型枚举

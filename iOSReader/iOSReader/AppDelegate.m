@@ -14,11 +14,10 @@
 #import "IRDataMannager.h"
 #import "IRAVOSHelper.h"
 #import "IRDefineHeader.h"
-#import "SARate.h"
 #import "FCUUID.h"
+// AVOS ID And Key
 #define AVOSCloudAppID  @"lv9a61q2rymr4gpnedq4spsee61vji7qjnmnwfpg198mb5hu"
 #define AVOSCloudAppKey @"53lwe465unijak5wf8lo8auzl08rr1vf9khmwvmfilhh92i9"
-
 @interface AppDelegate ()
 
 @property (nonatomic,strong)UITabBarController *tabBarController;
@@ -45,11 +44,6 @@
     [IRCategoryModel registerSubclass];
     [IRUser registerSubclass];
     
-    /** 评分插件 */
-    [SARate sharedInstance].daysUntilPrompt = 5;
-    [SARate sharedInstance].usesUntilPrompt = 5;
-    [SARate sharedInstance].remindPeriod = 30;
-    [SARate sharedInstance].email = @"ftxbird@126.com";
     
     /** 登录 */
     [self IRLogin];
@@ -69,6 +63,7 @@
  */
 - (void)IRLogin
 {
+    //获取该app 唯一设备id  (当用户系统重装无效)
     NSString *userUUID = [FCUUID uuidForDevice];
     AVQuery *query = [AVQuery queryWithClassName:@"IRUser"];
     [query whereKey:@"userId" equalTo:userUUID];
@@ -83,14 +78,6 @@
             self.loginUser = (IRUser *)object;
         }
     }];
-}
-
-
-- (void)storeUUIDAction:(NSNotification *)notification
-{
-    //通知操作
-    NSString *newUUID = notification.object;
-    NSLog(@"新UUID%@",newUUID);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

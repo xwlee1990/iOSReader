@@ -103,6 +103,15 @@
 - (void)saveUserFavouriteArticleTitle:(NSString *)title ArticleUrl:(NSString *)url WithSuccess:(void (^)(NSString *successStr,IRArticleModel *article))success failure:(void (^)(NSString *errorStr))failure;
 
 
+/**
+ *  删除单个用户收藏的文章
+ *
+ *  @param category      待删除文章模型
+ *  @param success       成功回调
+ *  @param failure       失败回调
+ *
+ */
+- (void)deleteUserFavouriteArticle:(IRArticleModel *)article  WithSuccess:(void (^)(NSString *successStr))success failure:(void (^)(NSString *errorStr))failure;
 
 /**
  *  删除单个用户分类数据
