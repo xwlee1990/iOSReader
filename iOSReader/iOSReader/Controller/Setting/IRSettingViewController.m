@@ -15,6 +15,7 @@
 #import "JHAboutMeViewController.h"
 #import "IRClearCache.h"
 #import "SARate.h"
+#import "SVProgressHUD.h"
 /**
  *  定义设置类型枚举
  */
@@ -243,7 +244,9 @@ typedef NS_ENUM(NSInteger, IRSettingType){
 - (void)clearCache:(IRClearCache *)clearCache didClearCacheInfo:(NSString *)info
 {
     [self setupViewInfo];
+    
     [self.tableView reloadData];
+    [SVProgressHUD showSuccessWithStatus:@"清理成功"];
 }
 
 - (void)didReceiveMemoryWarning {

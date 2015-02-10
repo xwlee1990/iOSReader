@@ -148,6 +148,7 @@
         headerView.openCaregoryBlock = ^{
             strongify(self);
             IRCategoryTableViewController *categoryVC = [[IRCategoryTableViewController alloc] init];
+            categoryVC.title =title;
             categoryVC.categoryType = indexPath.section;
             [self.navigationController pushViewController:categoryVC animated:YES];
             categoryVC.addToMainBlock =^(IRCategoryModel *addModel)
