@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, IRSettingType){
     
     // 显示缓存
     NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)objectAtIndex:0];
-    float cacheSize = [IRClearCache folderSizeAtPath:cachPath];
+    CGFloat cacheSize = [IRClearCache folderSizeAtPath:cachPath];
     NSString *cacheString = [NSString stringWithFormat:@"%0.1f MB", cacheSize];
     
     self.title_array = @[
@@ -158,18 +158,21 @@ typedef NS_ENUM(NSInteger, IRSettingType){
     
     
     switch (SettingType) {
+            
         case IRSettingTypePush:   //推送
         {
             JHSendSettingViewController *sendSettingViewController = [[JHSendSettingViewController alloc] init];
             [self.navigationController pushViewController:sendSettingViewController animated:YES];
         }
             break;
+            
         case IRSettingTypeDownload: //下载
         {
             JHOfflineBrowsingSettingViewController *offlineBrowsingSettingViewController = [[JHOfflineBrowsingSettingViewController alloc] init];
             [self.navigationController pushViewController:offlineBrowsingSettingViewController animated:YES];
         }
             break;
+            
         case IRSettingTypeClearCache: //清理缓存
         {
             UIActionSheet *actionSheet =
@@ -179,6 +182,7 @@ typedef NS_ENUM(NSInteger, IRSettingType){
             [actionSheet showInView:self.view];
         }
             break;
+            
         case IRSettingTypeFeedback: //意见反馈
         {
             JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
@@ -245,15 +249,5 @@ typedef NS_ENUM(NSInteger, IRSettingType){
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

@@ -124,4 +124,5 @@
  *  根据分类模型,获取头像图片
  */
 + (UIImage *)fetchCategoryAvatar:(IRCategoryModel *)category;
+
 @end

@@ -309,4 +309,5 @@
     }
     return avatarImage==nil?[UIImage imageNamed:@"AvatarDeafault"]:avatarImage;
 }
+
 @end
