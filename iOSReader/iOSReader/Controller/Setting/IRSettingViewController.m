@@ -14,6 +14,7 @@
 #import "JHFeedBackViewController.h"
 #import "JHAboutMeViewController.h"
 #import "IRClearCache.h"
+#import "SARate.h"
 /**
  *  定义设置类型枚举
  */
@@ -192,7 +193,7 @@ typedef NS_ENUM(NSInteger, IRSettingType){
             break;
         case IRSettingTypeRate:  //评分
         {
-        
+
         }
             break;
             

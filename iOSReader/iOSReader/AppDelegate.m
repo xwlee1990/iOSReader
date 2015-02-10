@@ -10,13 +10,11 @@
 #import "IRMainViewController.h"
 #import "IRCollectionViewController.h"
 #import "IRSettingViewController.h"
-#import "IRCategoryTableViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "IRDataMannager.h"
-#import "IRArticleModel.h"
-#import "IRCategoryModel.h"
 #import "IRAVOSHelper.h"
 #import "IRDefineHeader.h"
+#import "SARate.h"
 #define AVOSCloudAppID  @"lv9a61q2rymr4gpnedq4spsee61vji7qjnmnwfpg198mb5hu"
 #define AVOSCloudAppKey @"53lwe465unijak5wf8lo8auzl08rr1vf9khmwvmfilhh92i9"
 
@@ -37,7 +35,6 @@
     [AVOSCloud setApplicationId:AVOSCloudAppID
                       clientKey:AVOSCloudAppKey];
     
-    
     //统计应用启动情况
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -45,8 +42,11 @@
     [IRArticleModel registerSubclass];
     [IRCategoryModel registerSubclass];
     
-    //初始化用户数据
-    // [[ReaderDataMannager sharedManager] initUserData];
+    /** 评分插件 */
+    [SARate sharedInstance].daysUntilPrompt = 5;
+    [SARate sharedInstance].usesUntilPrompt = 5;
+    [SARate sharedInstance].remindPeriod = 30;
+    [SARate sharedInstance].email = @"ftxbird@126.com";
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
