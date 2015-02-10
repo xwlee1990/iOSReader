@@ -14,7 +14,23 @@
 #import "JHFeedBackViewController.h"
 #import "JHAboutMeViewController.h"
 #import "IRClearCache.h"
-
+/**
+ *  定义设置类型枚举
+ */
+typedef NS_ENUM(NSInteger, IRSettingType){
+    /** 推送设置 */
+    IRSettingTypePush = 1,
+    /** 仅WIFI下载图片 */
+    IRSettingTypeDownload,
+    /** 清除缓存 */
+    IRSettingTypeClearCache,
+    /** 意见反馈 */
+    IRSettingTypeFeedback,
+    /** 评分 */
+    IRSettingTypeRate,
+    /** 关于 */
+    IRSettingTypeAbout
+};
 @interface IRSettingViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate,JHSettingTableViewCellDelegate, IRClearCacheDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -45,23 +61,45 @@
     [self.view setBackgroundColor:IRGlobalBg];
     
     NSNumber *imageDownloadSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"imageDownloadSwitch"]];
-   
+    
     // 显示缓存
     NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)objectAtIndex:0];
     float cacheSize = [IRClearCache folderSizeAtPath:cachPath];
     NSString *cacheString = [NSString stringWithFormat:@"%0.1f MB", cacheSize];
     
     self.title_array = @[
-                         @[@{@"title":@"推送设置", @"type":@"Arrow", @"subtype":@"", @"done":@"SendSetting"}],
                          @[
-                             @{@"title":@"离线设置", @"type":@"Arrow", @"subtype":@"0", @"done":@"OffLineSetting"},
-                             @{@"title":@"仅Wi-Fi网络下载图片", @"type":@"Switch", @"subtype":imageDownloadSwitchNum, @"done":@"DownloadSetting"},
-                             @{@"title":@"清理缓存", @"type":@"Label", @"subtype":cacheString, @"done":@"ClearCache"}
-                             ],
+                             @{@"title":@"推送设置",
+                               @"type":@"Arrow",
+                               @"subtype":@"",
+                               @"done":@(IRSettingTypePush)}],
+                         
                          @[
-                             @{@"title":@"意见反馈", @"type":@"Arrow", @"subtype":@"0", @"done":@"Feedback"},
-                             @{@"title":@"为iOSReader评分", @"type":@"Arrow", @"subtype":@"0", @"done":@"StarSetting"},
-                             @{@"title":@"关于", @"type":@"Arrow", @"subtype":@"0", @"done":@"AboutMine"}
+                             @{@"title":@"仅Wi-Fi网络下载图片",
+                               @"type":@"Switch",
+                               @"subtype":imageDownloadSwitchNum,
+                               @"done":@(IRSettingTypeDownload)},
+                           
+                             @{@"title":@"清理缓存",
+                               @"type":@"Label",
+                               @"subtype":cacheString,
+                               @"done":@(IRSettingTypeClearCache)}],
+                         
+                         @[
+                             @{@"title":@"意见反馈",
+                               @"type":@"Arrow",
+                               @"subtype":@"0",
+                               @"done":@(IRSettingTypeFeedback)},
+                             
+                             @{@"title":@"为iOSReader评分",
+                               @"type":@"Arrow",
+                               @"subtype":@"0",
+                               @"done":@(IRSettingTypeRate)},
+                             
+                             @{@"title":@"关于",
+                               @"type":@"Arrow",
+                               @"subtype":@"0",
+                               @"done":@(IRSettingTypeAbout)}
                              ]
                          ];
 }
@@ -116,47 +154,54 @@
     
     NSArray *sub_title_array = self.title_array[indexPath.section];
     NSDictionary *dictionary = sub_title_array[indexPath.row];
-    NSString *done = dictionary[@"done"];
+    NSInteger SettingType = [dictionary[@"done"] integerValue];
     
-    if ([done isEqualToString:@"SendSetting"]) {//  推送设置
+    
+    switch (SettingType) {
+        case IRSettingTypePush:   //推送
+        {
+            JHSendSettingViewController *sendSettingViewController = [[JHSendSettingViewController alloc] init];
+            [self.navigationController pushViewController:sendSettingViewController animated:YES];
+        }
+            break;
+        case IRSettingTypeDownload: //下载
+        {
+            JHOfflineBrowsingSettingViewController *offlineBrowsingSettingViewController = [[JHOfflineBrowsingSettingViewController alloc] init];
+            [self.navigationController pushViewController:offlineBrowsingSettingViewController animated:YES];
+        }
+            break;
+        case IRSettingTypeClearCache: //清理缓存
+        {
+            UIActionSheet *actionSheet =
+            [[UIActionSheet alloc] initWithTitle:nil delegate:self
+            cancelButtonTitle:@"取消"  destructiveButtonTitle:@"清理"
+             otherButtonTitles:nil, nil];
+            [actionSheet showInView:self.view];
+        }
+            break;
+        case IRSettingTypeFeedback: //意见反馈
+        {
+            JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
+            [self.navigationController pushViewController:feedBackViewController animated:YES];
         
-        JHSendSettingViewController *sendSettingViewController = [[JHSendSettingViewController alloc] init];
-        [self.navigationController pushViewController:sendSettingViewController animated:YES];
+        }
+            break;
+        case IRSettingTypeRate:  //评分
+        {
         
-    }else if ([done isEqualToString:@"OffLineSetting"]){//  离线阅读设置
-        
-        JHOfflineBrowsingSettingViewController *offlineBrowsingSettingViewController = [[JHOfflineBrowsingSettingViewController alloc] init];
-        [self.navigationController pushViewController:offlineBrowsingSettingViewController animated:YES];
-        
-    }else if ([done isEqualToString:@"DownloadSetting"]){//  清理缓存
-        
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self
-                                                        cancelButtonTitle:@"取消"
-                                                   destructiveButtonTitle:@"清理"
-                                                        otherButtonTitles:nil, nil];
-        [actionSheet showInView:self.view];
-        
-    }else if ([done isEqualToString:@"ClearCache"]){//  意见反馈
-        
-        JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
-        [self.navigationController pushViewController:feedBackViewController animated:YES];
-        
-    }else if ([done isEqualToString:@"Feedback"]){ //  意见反馈
-        
-        JHFeedBackViewController *feedBackViewController = [[JHFeedBackViewController alloc] init];
-        [self.navigationController pushViewController:feedBackViewController animated:YES];
-        
-    }else if ([done isEqualToString:@"StarSetting"]){   // 评分
-        
-//        NSString *str = [NSString stringWithFormat: @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", @"954270"];
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
-        
-    }else if ([done isEqualToString:@"AboutMine"]){//  关于我们
-        
-        JHAboutMeViewController *aboutMeViewController = [[JHAboutMeViewController alloc] init];
-        [self.navigationController pushViewController:aboutMeViewController animated:YES];
-        
+        }
+            break;
+            
+        case IRSettingTypeAbout: //关于
+        {
+            JHAboutMeViewController *aboutMeViewController = [[JHAboutMeViewController alloc] init];
+            [self.navigationController pushViewController:aboutMeViewController animated:YES];
+        }
+            break;
+        default:
+            break;
     }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -202,13 +247,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

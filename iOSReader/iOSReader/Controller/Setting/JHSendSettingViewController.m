@@ -32,13 +32,16 @@
     [self.navigationItem setTitle:@"推送设置"];
     
     NSNumber *blogSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"blogSendSwitch"]];
-    NSNumber *webSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"webSendSwitch"]];
-    NSNumber *openSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"openSendSwitch"]];
+    //    NSNumber *webSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"webSendSwitch"]];
+    //    NSNumber *openSendSwitchNum = [NSNumber numberWithBool:[UserDefaults boolForKey:@"openSendSwitch"]];
     
     self.title_array = @[
-                         @{@"title":@"博客推送", @"type":@"Switch", @"subtype":blogSendSwitchNum},
-                         @{@"title":@"网站推送", @"type":@"Switch", @"subtype":webSendSwitchNum},
-                         @{@"title":@"开源推送", @"type":@"Switch", @"subtype":openSendSwitchNum}
+                         /*
+                          @{@"title":@"博客推送", @"type":@"Switch", @"subtype":blogSendSwitchNum},
+                          @{@"title":@"网站推送", @"type":@"Switch", @"subtype":webSendSwitchNum},
+                          @{@"title":@"开源推送", @"type":@"Switch", @"subtype":openSendSwitchNum}
+                          */
+                         @{@"title":@"消息推送", @"type":@"Switch", @"subtype":blogSendSwitchNum}
                          ];
     
 }
@@ -118,13 +121,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
