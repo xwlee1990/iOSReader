@@ -34,6 +34,9 @@
 		35E07BCD1A89DC960021CDE3 /* IRAVOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BC81A89DC960021CDE3 /* IRAVOSHelper.m */; };
 		35E07BCE1A89DC960021CDE3 /* IRDataMannager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BCA1A89DC960021CDE3 /* IRDataMannager.m */; };
 		35E07BCF1A89DC960021CDE3 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BCC1A89DC960021CDE3 /* UIView+Positioning.m */; };
+		35E07BD51A8A04090021CDE3 /* FCUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BD21A8A04090021CDE3 /* FCUUID.m */; };
+		35E07BD61A8A04090021CDE3 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BD41A8A04090021CDE3 /* UICKeyChainStore.m */; };
+		35E07BD91A8A090C0021CDE3 /* IRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07BD81A8A090C0021CDE3 /* IRUser.m */; };
 		8609B53C9FE9C0AC4666327E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C32B3FE4B43B4CE56864354 /* libPods.a */; };
 		D90C19CD1A83BE330060C523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CC1A83BE330060C523 /* main.m */; };
 		D90C19D01A83BE330060C523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C19CF1A83BE330060C523 /* AppDelegate.m */; };
@@ -183,6 +186,12 @@
 		35E07BCA1A89DC960021CDE3 /* IRDataMannager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRDataMannager.m; sourceTree = "<group>"; };
 		35E07BCB1A89DC960021CDE3 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
 		35E07BCC1A89DC960021CDE3 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		35E07BD11A8A04090021CDE3 /* FCUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUUID.h; sourceTree = "<group>"; };
+		35E07BD21A8A04090021CDE3 /* FCUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCUUID.m; sourceTree = "<group>"; };
+		35E07BD31A8A04090021CDE3 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		35E07BD41A8A04090021CDE3 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
+		35E07BD71A8A090C0021CDE3 /* IRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRUser.h; sourceTree = "<group>"; };
+		35E07BD81A8A090C0021CDE3 /* IRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRUser.m; sourceTree = "<group>"; };
 		4D6974993BCDA6B6CB118CB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D90C19C71A83BE330060C523 /* iOSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90C19CB1A83BE330060C523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -370,6 +379,17 @@
 			path = iRate;
 			sourceTree = "<group>";
 		};
+		35E07BD01A8A04090021CDE3 /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				35E07BD11A8A04090021CDE3 /* FCUUID.h */,
+				35E07BD21A8A04090021CDE3 /* FCUUID.m */,
+				35E07BD31A8A04090021CDE3 /* UICKeyChainStore.h */,
+				35E07BD41A8A04090021CDE3 /* UICKeyChainStore.m */,
+			);
+			path = UUID;
+			sourceTree = "<group>";
+		};
 		5A4E705F8339ECA723C77EF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +545,7 @@
 		D90C1A081A83BEDD0060C523 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				35E07BD01A8A04090021CDE3 /* UUID */,
 				35E07BB01A89DB810021CDE3 /* SARate */,
 				D90C1AFD1A87442E0060C523 /* SVProgressHUD */,
 				D90C1A091A83BEDD0060C523 /* KINWebBrowser */,
@@ -569,6 +590,8 @@
 				D90C1A2C1A83BEDD0060C523 /* CategoryWebsiteModel.plist */,
 				D90C1A2D1A83BEDD0060C523 /* IRCategoryModel.h */,
 				D90C1A2E1A83BEDD0060C523 /* IRCategoryModel.m */,
+				35E07BD71A8A090C0021CDE3 /* IRUser.h */,
+				35E07BD81A8A090C0021CDE3 /* IRUser.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -959,13 +982,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				048939A01A8682C400727F26 /* JHOfflineBrowsingSettingViewController.m in Sources */,
+				35E07BD51A8A04090021CDE3 /* FCUUID.m in Sources */,
 				048939A11A8682C400727F26 /* JHSendSettingViewController.m in Sources */,
 				0489399E1A8682C400727F26 /* JHFeedBackViewController.m in Sources */,
+				35E07BD91A8A090C0021CDE3 /* IRUser.m in Sources */,
 				D90C1A601A83BEDD0060C523 /* UIColor+JH.m in Sources */,
 				35E07BBF1A89DB810021CDE3 /* SARate.m in Sources */,
 				D90C1A481A83BEDD0060C523 /* IRMainViewController.m in Sources */,
 				35E07BCF1A89DC960021CDE3 /* UIView+Positioning.m in Sources */,
 				D90C1A591A83BEDD0060C523 /* TUSafariActivity.m in Sources */,
+				35E07BD61A8A04090021CDE3 /* UICKeyChainStore.m in Sources */,
 				048939A41A86830800727F26 /* JHSettingTableViewCell.m in Sources */,
 				D93A66BE1A87AB5600AE199C /* IRArticleCell.m in Sources */,
 				D90C1A4E1A83BEDD0060C523 /* KINWebBrowserViewController.m in Sources */,

@@ -15,12 +15,14 @@
 #import "IRAVOSHelper.h"
 #import "IRDefineHeader.h"
 #import "SARate.h"
+#import "FCUUID.h"
 #define AVOSCloudAppID  @"lv9a61q2rymr4gpnedq4spsee61vji7qjnmnwfpg198mb5hu"
 #define AVOSCloudAppKey @"53lwe465unijak5wf8lo8auzl08rr1vf9khmwvmfilhh92i9"
 
 @interface AppDelegate ()
 
 @property (nonatomic,strong)UITabBarController *tabBarController;
+@property (nonatomic,strong)IRUser *loginUser;
 @end
 
 @implementation AppDelegate
@@ -28,19 +30,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // 判断是否是第一次启动
+    /**判断是否是第一次启动*/
     [self firstLaunchJudge];
     
-    //设置AVOSCloud
+    /**设置AVOSCloud*/
     [AVOSCloud setApplicationId:AVOSCloudAppID
                       clientKey:AVOSCloudAppKey];
     
-    //统计应用启动情况
+    /**统计应用启动情况*/
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     /* 重要! 注册子类 App生命周期内 只需要执行一次即可*/
     [IRArticleModel registerSubclass];
     [IRCategoryModel registerSubclass];
+    [IRUser registerSubclass];
     
     /** 评分插件 */
     [SARate sharedInstance].daysUntilPrompt = 5;
@@ -48,16 +51,47 @@
     [SARate sharedInstance].remindPeriod = 30;
     [SARate sharedInstance].email = @"ftxbird@126.com";
     
+    /** 登录 */
+    [self IRLogin];
+
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
     self.window.rootViewController = self.tabBarController;
-    
     [self.window makeKeyAndVisible];
     
     
     return YES;
 }
 
+
+/**
+ *  登录
+ */
+- (void)IRLogin
+{
+    NSString *userUUID = [FCUUID uuidForDevice];
+    AVQuery *query = [AVQuery queryWithClassName:@"IRUser"];
+    [query whereKey:@"userId" equalTo:userUUID];
+    weakify(self);
+    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+        strongify(self);
+        if (!object) {
+            self.loginUser = [IRUser new];
+            self.loginUser.userId = userUUID;
+            [self.loginUser saveInBackground];
+        } else {
+            self.loginUser = (IRUser *)object;
+        }
+    }];
+}
+
+
+- (void)storeUUIDAction:(NSNotification *)notification
+{
+    //通知操作
+    NSString *newUUID = notification.object;
+    NSLog(@"新UUID%@",newUUID);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
